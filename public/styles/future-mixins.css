@@ -1,0 +1,35 @@
+.trabex-orange{
+	background-color: #FFCF03;
+}
+.trabex-red{
+	background-color: #F7323F;
+}
+a.trabex-red-text{
+	color: #F7323F;
+}
+
+.trabex-darker-grey{
+	background-color: #565656;
+}
+.trabex-darker-grey-text{
+	color: #565656;
+}
+.trabex-grey{
+	background-color: #D1D1D1;
+}
+.trabex-grey-text{
+	color: #D1D1D1;
+}
+.full-height{
+    min-height: 82.5vh;
+    max-height: 82.5vh;
+}
+.full-width{
+	width: 100%;
+}
+.btn.full{
+	width: 100%;
+}
+.material-icons{
+	line-height: 56px;
+}
