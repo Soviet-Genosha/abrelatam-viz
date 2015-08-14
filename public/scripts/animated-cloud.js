@@ -84,26 +84,35 @@ window.abreLatam.cloud = {
             .on('mouseover', function(d){
                 console.log(d.name,d.count);
             });
+            node.append("text")
+                .text(function(d) { return d.name; })
+                .style("font-size", function(d) { return Math.min(2 * d.r, (2 * d.r - 8) / this.getComputedTextLength() * 24) + "px"; })
+                .attr("dy", ".35em");
 
-            node
-              .append("text")
-              .attr("dy", ".3em")
-              .style("text-anchor", "middle")
-              .text(function(d) { return d.name.substring(0, d.r / 3); });
+            
             node.transition()
                 .duration(3000)
                 .delay(function (d, i) {
                 return i * .5;
-            })
-
-            .attrTween("r", function (d) {
+            }).attrTween("r", function (d) {
                     var i = d3.interpolate(0, d.radius);
                         return function (t) {
                                     return d.radius = i(t);
                                 };
-                    });
+                    })
+             
+            node.selectAll("text")
+                .transition()
+                    .duration(3000)
+                    .delay(function (d, i) {
+                    return i * .5;
+                })
+                .style("font-size", function(d) { 
+                    return Math.min(2 * d.r, (2 * d.r - 8) / 
+                        this.getComputedTextLength() * 24) + "px"; })
+                
 
-            
+                        
         function tick(e) {
             node.each(cluster(3 * e.alpha * e.alpha))
                 .each(collide(.08))
