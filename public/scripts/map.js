@@ -35,9 +35,9 @@ window.abreLatam.map = {
         });
         
     },
-    setupBubbles: function(){
+    setupBubbles: function(cities){
 
-        var ready = function ready(error, cities) {
+        
 
             var bubbles = []
             for (var i = 0; i < cities.length; i++) {
@@ -59,10 +59,7 @@ window.abreLatam.map = {
              }
             });
 
-        };
-        queue()
-            .defer(d3.json, "data/cities.json")
-            .await(ready);
+        
 
         
     }

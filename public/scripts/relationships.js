@@ -1,6 +1,6 @@
 window.abreLatam = window.abreLatam || {};
 window.abreLatam.relationships = {
-	load:function(){
+	load:function( us, airports, flights){
 		var width = 960,
 	    height = 500;
 
@@ -18,15 +18,9 @@ window.abreLatam.relationships = {
 
 		var svg = d3.select("svg");
 
-		queue()
-		    .defer(d3.json, "data/us.json")
-		    .defer(d3.json, "data/cities.json")
-		    .defer(d3.csv, "data/flights.csv")
-		    .await(ready);
+	
 
-		function ready(error, us, airports, flights) {
-		  if (error) throw error;
-
+		
 		  var airportById = d3.map(),
 		      positions = [];
 
@@ -95,6 +89,6 @@ window.abreLatam.relationships = {
 		      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
 		      .attr("r", function(d, i) { return Math.sqrt(d.count); });
 
-	};
-}
+
+	}
 }
