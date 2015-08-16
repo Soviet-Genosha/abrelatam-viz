@@ -9,9 +9,9 @@ window.abreLatam.cloud = {
     
     var 	width = 500,
             height = 600,
-            padding = 2, // separation between same-color nodes
+            padding = 5, // separation between same-color nodes
             clusterPadding = 15, // separation between different-color nodes
-            maxRadius = 20;
+            maxRadius = 30;
 
             var groups = _.countBy(projects, function(d){
                 return d.Tipo2.trim() === "" ? "N/A" : d.Tipo2 ;
@@ -35,7 +35,7 @@ window.abreLatam.cloud = {
             };
 
 
-			var diameter = 600,
+			var diameter = 500,
 			    format = d3.format(",d");
 
 			var pack = d3.layout.pack()
@@ -44,7 +44,14 @@ window.abreLatam.cloud = {
 
 			var svg = d3.select("svg")
 			  .append("g")
-			    .attr("transform", "translate(500,2)");
+			    .attr("transform", "translate(650,20)");
+
+			svg.append("rect")
+				.attr("class","back")
+				.attr("x", 10)
+	            .attr("y", 10)
+	            .attr("width", 1025)
+	            .attr("height", 800)
 
 			
 			 var node = svg.datum(root).selectAll(".node")

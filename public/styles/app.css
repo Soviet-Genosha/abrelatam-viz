@@ -55,3 +55,7 @@ circle {
 text {
   font: 10px sans-serif;
 }
+
+rect.back{
+	fill: rgb(206, 211, 214);
+}

@@ -6,7 +6,7 @@ $(document).ready(function(){
     var ready = function(error, projects, cities,us,relations){
 
         window.abreLatam.map.load();
-        // window.abreLatam.map.setupBubbles(cities);
+        window.abreLatam.map.setupBubbles(cities);
         window.abreLatam.relationships.load(us, cities, relations);
         window.abreLatam.cloud.load(projects);
     };

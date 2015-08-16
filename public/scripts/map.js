@@ -33,6 +33,15 @@ window.abreLatam.map = {
             return {path: this.path, projection: this.projection};
         },
         });
+    //HACK: To hide the rest of the wolrd
+    d3.select("svg")
+                .append("rect")
+                .attr("transform", "translate(500,2)")
+                .attr("class","back")
+                .attr("x", 10)
+                .attr("y", 10)
+                .attr("width", 1025)
+                .attr("height", 800)
         
     },
     setupBubbles: function(cities){
