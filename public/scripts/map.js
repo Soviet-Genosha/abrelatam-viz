@@ -36,7 +36,7 @@ window.abreLatam.map = {
     //HACK: To hide the rest of the wolrd
     d3.select("svg")
                 .append("rect")
-                .attr("transform", "translate(500,2)")
+                .attr("transform", "translate(500,-50)")
                 .attr("class","back")
                 .attr("x", 10)
                 .attr("y", 10)
