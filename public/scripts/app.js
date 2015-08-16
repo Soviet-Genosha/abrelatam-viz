@@ -6,9 +6,9 @@ $(document).ready(function(){
     var ready = function(error, projects, cities,us,relations){
 
         window.abreLatam.map.load();
-        window.abreLatam.map.setupBubbles(cities);
-        // window.abreLatam.relationships.load(us, cities, relations);
-        window.abreLatam.cloud.load(projects);
+        // window.abreLatam.map.setupBubbles(cities);
+        window.abreLatam.relationships.load(us, cities, relations);
+        // window.abreLatam.cloud.load(projects);
     };
     queue()
             .defer(d3.json, "data/abrelatam-v1.json")

@@ -2,17 +2,6 @@ body{
 	background-color: rgb(206, 211, 214);
 }
 
-.states {
-  fill: #ccc;
-}
-
-.state-borders {
-  fill: none;
-  stroke: #fff;
-  stroke-width: 1.5px;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-}
 
 .airport-arcs {
   display: none;
@@ -27,17 +16,28 @@ body{
 
 .airports circle {
   fill: steelblue;
-  stroke: #fff;
+  stroke: #000;
   pointer-events: none;
 }
 
 .airport:hover .airport-arcs {
   display: inline;
+  stroke: transparent;
 }
 
 svg:not(:hover) .airport-cell {
-  stroke: #000;
-  stroke-opacity: .2;
+  stroke: transparent;
+  stroke-opacity: .8;
+}
+
+.datamap .airport-arcs path{
+    stroke: #000 ;
+    stroke-width: 1px;
+}
+
+.datamap  path.airport-cell{
+    stroke: transparent ;
+    stroke-width: 1px;
 }
 
 circle {

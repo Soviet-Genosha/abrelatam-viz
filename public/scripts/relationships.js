@@ -1,16 +1,10 @@
 window.abreLatam = window.abreLatam || {};
 window.abreLatam.relationships = {
-	load:function( us, airports, flights){
+	load:function(us, airports, flights){
 		var width = 960,
 	    height = 500;
 
 
-		var projection = d3.geo.albers()
-		    .translate([width / 3, height / 2])
-		    .scale(100);
-
-		var path = d3.geo.path()
-		    .projection(projection);
 		var voronoi = d3.geom.voronoi()
 		    .x(function(d) { return d.x; })
 		    .y(function(d) { return d.y; })
@@ -47,7 +41,7 @@ window.abreLatam.relationships = {
 		    if (d.count = Math.max(d.incoming.length, d.outgoing.length)) {
 		      d[0] = +d.google.longitude;
 		      d[1] = +d.google.latitude;
-		      var position = projection(d);
+		      var position = window.abreLatam.map.map.projection(d);
 		      d.x = position[0];
 		      d.y = position[1];
 		      return true;
@@ -57,15 +51,7 @@ window.abreLatam.relationships = {
 		  voronoi(airports)
 		      .forEach(function(d) { d.point.cell = d; });
 
-		  svg.append("path")
-		      .datum(topojson.feature(us, us.objects.land))
-		      .attr("class", "states")
-		      .attr("d", path);
-
-		  svg.append("path")
-		      .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
-		      .attr("class", "state-borders")
-		      .attr("d", path);
+		 
 
 		  var airport = svg.append("g")
 		      .attr("class", "airports")
@@ -83,11 +69,12 @@ window.abreLatam.relationships = {
 		    .selectAll("path")
 		      .data(function(d) { return d.outgoing; })
 		    .enter().append("path")
-		      .attr("d", function(d) { return path({type: "LineString", coordinates: [d.source, d.target]}); });
+		      .attr("d", function(d) { return window.abreLatam.map.map.path({type: "LineString", coordinates: [d.source, d.target]}); });
 
 		  airport.append("circle")
-		      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
-		      .attr("r", function(d, i) { return Math.sqrt(d.count); });
+		      .attr("transform", function(d) 
+		      	{ return "translate(" + d.x + "," + d.y + ")"; })
+		      .attr("r", function(d, i) { return d.count; });
 
 
 	}
