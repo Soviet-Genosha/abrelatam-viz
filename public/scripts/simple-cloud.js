@@ -7,11 +7,11 @@ window.abreLatam.cloud = {
     },
     load: function(projects){
     
-    var 	width = 1280,
-            height = 720,
+    var 	width = 500,
+            height = 600,
             padding = 2, // separation between same-color nodes
-            clusterPadding = 25, // separation between different-color nodes
-            maxRadius = 50;
+            clusterPadding = 15, // separation between different-color nodes
+            maxRadius = 20;
 
             var groups = _.countBy(projects, function(d){
                 return d.Tipo2.trim() === "" ? "N/A" : d.Tipo2 ;
@@ -35,7 +35,7 @@ window.abreLatam.cloud = {
             };
 
 
-			var diameter = 960,
+			var diameter = 600,
 			    format = d3.format(",d");
 
 			var pack = d3.layout.pack()
@@ -44,7 +44,7 @@ window.abreLatam.cloud = {
 
 			var svg = d3.select("svg")
 			  .append("g")
-			    .attr("transform", "translate(300,2)");
+			    .attr("transform", "translate(500,2)");
 
 			
 			 var node = svg.datum(root).selectAll(".node")
