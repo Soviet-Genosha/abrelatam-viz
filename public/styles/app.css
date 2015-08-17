@@ -22,11 +22,13 @@ body{
 
 .airport:hover .airport-arcs {
   display: inline;
+  stroke-dasharray: 5, 5;
   stroke: transparent;
 }
 
 svg:not(:hover) .airport-cell {
   stroke: transparent;
+
   stroke-opacity: .8;
 }
 
