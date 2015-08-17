@@ -86,7 +86,7 @@ window.abreLatam.packedCircles = {
 				var svg = d3.select("svg")
 				  .append("g")
 				  .attr('class', 'packed-circles')
-				    .attr("transform", "translate(" + xy[0] + "," + xy[1] + ")");
+				    .attr("transform", "translate(" + (xy[0]-20) + "," + (xy[1]-20) + ")");
 
 				
 				 var node = svg.datum(root)
@@ -104,13 +104,25 @@ window.abreLatam.packedCircles = {
 				      .text(function(d) { return d.Nombre + (d.children ? "" : ": " + format(d.size)); });
 
 				  node.append("circle")
-				      .attr("r", function(d) { return d.r; });
+				      .attr("r", function(d) { return 7; })
+				      .filter(function(d) { return !d.children; })
+				      .attr('class', function(d){
+				      	
+				      	return d.Tipo1.toLowerCase() + " " + 
+				      			d.Tipo2.toLowerCase();
+				      })
+				      .on('click',function(d){
+				      	alert(d.Nombre + ":" + d.Descripcion);
+				      });
 
 				  node.filter(function(d) { return !d.children; })
 				  	  .append("text")
 				      .attr("dy", ".3em")
 				      .style("text-anchor", "middle")
-				      .text(function(d) { return d.Nombre.substring(0, d.r / 3); });
+				      .text(function(d) { 
+				      	return "";
+				      	// return d.Nombre.substring(0, d.r / 3); 
+				      });
 
 				d3.select(self.frameElement).style("height", diameter + "px");
 

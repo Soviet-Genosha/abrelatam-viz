@@ -15,8 +15,8 @@ body{
 }
 
 .airports circle {
-  fill: steelblue;
-  stroke: #000;
+  fill: transparent;
+  stroke: transparent;
   pointer-events: none;
 }
 
@@ -42,22 +42,70 @@ svg:not(:hover) .airport-cell {
     stroke-width: 1px;
 }
 
+path.airport circle{
+    stroke: transparent ;
+ 	fill:transparent;
+}
+
+
+
+
+rect.back{
+	fill: rgb(206, 211, 214);
+}
+
+
+
+
+/* Circle Packing */
+
+
+
 circle {
-  fill: rgb(31, 119, 180);
-  fill-opacity: .25;
   stroke: rgb(31, 119, 180);
   stroke-width: 1px;
 }
 
-.leaf circle {
+g.node circle{
+	
+  	stroke-width:0;
+	fill:transparent;
+	
+}
+g.leaf circle {
   fill: #ff7f0e;
   fill-opacity: 1;
+  cursor: pointer;
 }
+g.leaf circle.inclusion {
+	fill:#EB307D;
+}
+g.leaf circle.proyecto {
+	fill:#32B375;
+}
+g.leaf circle.hacking{
+	fill:#2277BA;
+}
+
+
+g.leaf circle.transparencia{
+	fill:#31AADF;
+}
+
+g.leaf circle.ciudadania{
+	fill:#EB423E;
+}
+
+g.leaf circle.redsocial{
+	fill:#64318E;
+}
+
+
+
+
+
+
 
 text {
   font: 10px sans-serif;
-}
-
-rect.back{
-	fill: rgb(206, 211, 214);
 }
