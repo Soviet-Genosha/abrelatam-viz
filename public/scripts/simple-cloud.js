@@ -27,14 +27,13 @@ window.abreLatam.cloud = {
                 });
                 i++;
             }
-            console.log(nodes);
             
             var root = {
             	name: "root",
             	children : nodes,
             };
 
-
+            console.log(root);
 			var diameter = 500,
 			    format = d3.format(",d");
 

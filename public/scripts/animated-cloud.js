@@ -82,7 +82,7 @@ window.abreLatam.cloud = {
             .call(force.drag)
 
             .on('mouseover', function(d){
-                console.log(d.name,d.count);
+                
             });
             node.append("text")
                 .text(function(d) { return d.name; })

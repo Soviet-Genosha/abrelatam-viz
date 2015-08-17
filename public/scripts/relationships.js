@@ -33,7 +33,7 @@ window.abreLatam.relationships = {
 		        if (source && target){
 		    		source.outgoing.push(link);
 		    		target.incoming.push(link);
-		    		console.log(link)	
+		    		
 		        }
 		  });
 
