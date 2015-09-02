@@ -9,6 +9,8 @@
   <title></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/bower_components/bootstrap/bootstrap.css">
+
   <link rel="stylesheet" href="/bower_components/wow.js/css/libs/animate.css"/>
   <link rel="stylesheet" href="/styles/fonts.css">
   <link rel="stylesheet" href="/styles/app.css">
@@ -32,12 +34,21 @@
 </main>
 
 
+   <!-- BEGIN: doT Template Definition. -->
+    <script type="text/template" class="projectTemplate">
+        <div class="item">
+          <h2>{{=it.Nombre}}</h2>
+        </div>
+    </script>
   
 
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="/bower_components/wow.js/dist/wow.min.js"></script>
   <script src="/bower_components/queue-async/queue.min.js"></script>
   <script src="/bower_components/underscore/underscore-min.js"></script>
+  <script src="/bower_components/bootstrap/bootstrap.js"></script>
+  <script src="/bower_components/doT/doT.min.js"></script>
+  
   
   
   <script src="/scripts/map.js"></script>

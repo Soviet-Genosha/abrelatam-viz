@@ -11,9 +11,8 @@ window.abreLatam.fociProjectsMap = {
 		    // a class you'll add to the DOM elements
 		   
 		   
- 			var padding = 5, // separation between same-color nodes
-            	clusterPadding = 15, // separation between different-color nodes
-            	maxRadius = 30;
+ 				
+            	
 
 
 
@@ -21,11 +20,11 @@ window.abreLatam.fociProjectsMap = {
         	
         var width = 960,
 	    	height = 500,
-	    	padding = 6, // separation between nodes
-	    	maxRadius = 12;
+	    	padding = 3, // separation between nodes
+	    	maxRadius = 15;
 
 		var n = 200, // total number of nodes
-		    m = 10; // number of distinct clusters
+		    m = 3; // number of distinct clusters
 
 		var color = d3.scale.category10()
 		    .domain(d3.range(m));
@@ -45,7 +44,8 @@ window.abreLatam.fociProjectsMap = {
 			var xy = self.latLngToXY(n.geo.google.latitude, n.geo.google.longitude);
 			
 			return{
-					radius: maxRadius/3,
+					n:n,
+					radius: maxRadius/2.5,
 			    	color: color(j),
 			    	cx: xy[0],
 			   		cy: xy[1]		
@@ -66,8 +66,33 @@ window.abreLatam.fociProjectsMap = {
 		  .enter().append("circle")
 		    .attr("r", function(d) { return d.radius; })
 		    .style("fill", function(d) { return d.color; })
-		    .call(force.drag);
+		    // .call(force.drag);
+		    .on('mouseover',showPopover)
+		    .on('mouseout',removePopovers);
 
+
+		function removePopovers () {
+			var self      = d3.select(this);
+          $('.popover').remove();
+        }
+
+        function showPopover (d) {
+
+        var self      = d3.select(this);
+        
+    	var projectTemplate = doT.template($( "script.projectTemplate" ).html());
+      
+          $(self).popover({
+            placement: 'auto top',
+            container: 'body',
+            trigger: 'manual',
+            html : true,
+            content: function() { 
+              return projectTemplate(d.n);
+          	}
+          });
+          $(self).popover('show');
+        }
 		function tick(e) {
 		  circle
 		      .each(gravity(.2 * e.alpha))
