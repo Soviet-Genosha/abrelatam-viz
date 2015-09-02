@@ -11,21 +11,16 @@ window.abreLatam.relationships = {
 		    .clipExtent([[0, 0], [width, height]]);
 
 		var svg = d3.select("svg");
-
-	
-
 		
 		  var airportById = d3.map(),
 		      positions = [];
 
 		  airports.forEach(function(d) {
-
 		    airportById.set(d.key, d);
 		    d.outgoing = [];
 		    d.incoming = [];
 		  });
 
-		  console.log(airportById);
 		  flights.forEach(function(flight) {
 		    var source = airportById.get(flight.origin),
 		        target = airportById.get(flight.destination),
@@ -62,7 +57,11 @@ window.abreLatam.relationships = {
 
 		  airport.append("path")
 		      .attr("class", "airport-cell")
-		      .attr("d", function(d) { return d.cell.length ? "M" + d.cell.join("L") + "Z" : null; });
+		      .on('mouseover', function(d){
+		      	console.log(d);
+		      })
+		      .attr("d", function(d) 
+		      	{ return d.cell.length ? "M" + d.cell.join("L") + "Z" : null; });
 
 		  airport.append("g")
 		      .attr("class", "airport-arcs")

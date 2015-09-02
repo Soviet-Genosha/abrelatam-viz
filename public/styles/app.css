@@ -27,8 +27,7 @@ body{
 }
 
 svg:not(:hover) .airport-cell {
-  stroke: transparent;
-
+  
   stroke-opacity: .8;
 }
 
@@ -38,7 +37,6 @@ svg:not(:hover) .airport-cell {
 }
 
 .datamap  path.airport-cell{
-    stroke: transparent ;
     stroke-width: 1px;
 }
 
