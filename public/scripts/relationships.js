@@ -58,7 +58,10 @@ window.abreLatam.relationships = {
 		  airport.append("path")
 		      .attr("class", "airport-cell")
 		      .on('mouseover', function(d){
-		      	console.log(d);
+		      	window.abreLatam.controller.showOnly(d);
+		      })
+		      .on('mouseout',function(){
+		      	window.abreLatam.controller.showAll();
 		      })
 		      .attr("d", function(d) 
 		      	{ return d.cell.length ? "M" + d.cell.join("L") + "Z" : null; });

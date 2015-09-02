@@ -5,21 +5,13 @@ window.abreLatam.fociProjectsMap = {
 	
 	load: function(map,cities,projects){
 		map.addPlugin('packedCircles', function ( layer, data ) {  
-		   			// hold this in a closure
-		    var self = this;
-
-		    // a class you'll add to the DOM elements
-		   
-		   
- 				
-            	
-
-
-
-            
-        	
+	    
+	    var self = this;   
+ 		window.abreLatam.fociProjectsMap.baseSvg = layer;
+            	        	
         var width = 960,
 	    	height = 500,
+	    	transitionDuration = 300,
 	    	padding = 3, // separation between nodes
 	    	maxRadius = 15;
 
@@ -32,7 +24,8 @@ window.abreLatam.fociProjectsMap = {
 	
 		var nodes = projects.map(function(n,j){
 			
-			var k = n.Ciudad
+			var k = n.Ciudad;
+
 			for (var i = 0; i < cities.length; i++) {
 	            		c = cities[i];
 	            		if (c.city === k){
@@ -61,9 +54,14 @@ window.abreLatam.fociProjectsMap = {
 		    .on("tick", tick)
 		    .start();
 
-		var circle = layer.selectAll("circle")
+		var circle = window.abreLatam.fociProjectsMap.circles = layer.selectAll("circle")
 		    .data(nodes)
 		  .enter().append("circle")
+		  	.attr('class' ,function(d){
+		  		//cluster by city?
+		  		var c = (d.n.Pais + "-" + d.n.Ciudad).split(' ').join('-').toLowerCase();
+		  		return c;
+		  	})
 		    .attr("r", function(d) { return d.radius; })
 		    .style("fill", function(d) { return d.color; })
 		    // .call(force.drag);
@@ -141,4 +139,26 @@ window.abreLatam.fociProjectsMap = {
 	
 		map.packedCircles( projects );  
 	},
+
+	showOnly: function(c){
+		var layer = window.abreLatam.fociProjectsMap.baseSvg ;
+		layer.selectAll('circle')
+			.transition()
+			.duration(1000)
+			.attr('opacity',0);
+		layer.selectAll('circle.' + c + '')
+			.transition()
+			.duration(1000)
+			.attr('opacity',1);
+	},
+	showAll:function(){
+		var layer = window.abreLatam.fociProjectsMap.baseSvg ;
+		layer.selectAll('circle')
+			.transition()
+			.duration(1000)
+			.attr('opacity',1);
+	},
+
+
+
 };

@@ -6,10 +6,16 @@ function googleColors(n) {
 }
 $(document).ready(function(){
     new WOW().init();
+    window.abreLatam.controller.load();
     
-    var ready = function(error, projects, cities,us,relations){
+});
 
 
+window.abreLatam = window.abreLatam || {};
+window.abreLatam.controller = {
+
+    load: function(){
+            var ready = function(error, projects, cities,us,relations){
 
         var filterProjects = _.filter(projects, function(p) {
             if (!p.Ciudad){
@@ -35,6 +41,16 @@ $(document).ready(function(){
 
     
 
-   
 
-});
+        },
+        showOnly:function(c){
+            console.log('showOnly',c.key.toLowerCase());
+            var k =(c.country + "-" + c.city).split(' ').join('-').toLowerCase();
+                
+            window.abreLatam.fociProjectsMap.showOnly(k.toLowerCase());
+        },
+        showAll:function(){
+            console.log('showAll');
+            window.abreLatam.fociProjectsMap.showAll();
+        }
+};

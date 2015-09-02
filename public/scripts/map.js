@@ -61,7 +61,6 @@ window.abreLatam.map = {
                 })
             };
 
-            console.log(bubbles);
             window.abreLatam.map.map.bubbles(bubbles, {
              popupTemplate: function(geo, data) {
                return "<div class='hoverinfo'>Bubble for " + data.raw.city + "";
