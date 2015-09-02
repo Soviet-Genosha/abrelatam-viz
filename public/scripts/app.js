@@ -10,10 +10,16 @@ $(document).ready(function(){
     var ready = function(error, projects, cities,us,relations){
 
 
+
+        var filterProjects = _.filter(projects, function(p) {
+            return p.Ciudad;
+        });
+
+
         window.abreLatam.map.load();
-        window.abreLatam.cloud.load(projects);
+        window.abreLatam.cloud.load(filterProjects);
         window.abreLatam.relationships.load(us, cities, relations);
-        window.abreLatam.packedCircles.load(window.abreLatam.map.map,cities,projects);
+        window.abreLatam.fociProjectsMap.load(window.abreLatam.map.map,cities,filterProjects);
         
         
     };
