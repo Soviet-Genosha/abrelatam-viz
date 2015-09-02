@@ -24,7 +24,7 @@ window.abreLatam.map = {
             setProjection: function(element) {
                 this.projection = d3.geo.equirectangular()
                 .center([-15.85606,  -15.41684])
-              .rotate([4.4, 0])
+              .rotate([2.4, 0])
               .scale(375)
               .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
             this.path = d3.geo.path()

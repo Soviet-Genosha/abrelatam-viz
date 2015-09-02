@@ -12,6 +12,9 @@ $(document).ready(function(){
 
 
         var filterProjects = _.filter(projects, function(p) {
+            if (!p.Ciudad){
+                console.log("El projecto " + p.Nombre + " no tiene ciudad y no se lo podra visualizar");
+            }
             return p.Ciudad;
         });
 

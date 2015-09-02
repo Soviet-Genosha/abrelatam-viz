@@ -8,7 +8,7 @@ window.abreLatam.relationships = {
 		var voronoi = d3.geom.voronoi()
 		    .x(function(d) { return d.x; })
 		    .y(function(d) { return d.y; })
-		    .clipExtent([[0, 0], [width, height]]);
+		    .clipExtent([[0, 0], [width/1.5, height]]);
 
 		var svg = d3.select("svg");
 		

@@ -7,7 +7,7 @@ window.abreLatam.cloud = {
     },
     load: function(projects){
     
-    var 	width = 500,
+    var 	width = 400,
             height = 600,
             padding = 5, // separation between same-color nodes
             clusterPadding = 15, // separation between different-color nodes
@@ -32,7 +32,7 @@ window.abreLatam.cloud = {
             	name: "root",
             	children : nodes,
             };
-
+            
             console.log(root);
 			var diameter = 500,
 			    format = d3.format(",d");
@@ -77,7 +77,7 @@ window.abreLatam.cloud = {
 
 			d3.select(self.frameElement).style("height", diameter + "px");
 
-
+			
 
     }
 };
