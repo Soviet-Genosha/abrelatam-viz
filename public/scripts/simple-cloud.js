@@ -13,7 +13,7 @@ window.abreLatam.cloud = {
 
 		
 
-		
+		this.changebubble(root);
     },
     processRoot: function(projects){
     	var groups = _.countBy(projects, function(d){
@@ -123,16 +123,7 @@ function classes(root) {
 //My Refer;
 var click = 0;
 
-function changevalues() {
-    click++;
-    if (click == 1) changebubble(root2);
-    else if (click == 2) changebubble(root3);
-    else changebubble(root4);
-
-}
-
-//update function
-function changebubble(root) {
+this.changebubble= function (root) {
     var node = this.svg.selectAll(".node")
         .data(
             bubble.nodes(classes(root)).filter(function (d){return !d.children;}),
