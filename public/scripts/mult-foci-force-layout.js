@@ -44,10 +44,10 @@ window.abreLatam.fociProjectsMap = {
 		});
 
 		var force = d3.layout.force()
-		    .linkDistance(600)
+		    .linkDistance(0)
 	        .size([width, height])
 		    .gravity(0)
-    		.charge(0);
+    		.charge(0); 
 		    
 		
 		force
