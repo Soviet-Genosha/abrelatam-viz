@@ -14,10 +14,30 @@ window.abreLatam.cloud = {
 		
 
 		this.changebubble(root);
+		return window.abreLatam.cloud.filteredRoot;
     },
    	showAll: function(){
    		var root = this.processRoot(this.projects);
    		this.changebubble(root);
+   	},
+   	countOrganizations:function(projects){
+   		var groups = _.countBy(projects, function(d){
+                return d.Quien.trim() === "" ? "N/A" : d.Quien ;
+            });
+            var nodes = [];
+            var i = 0;
+            for(var k in groups){ 
+                nodes.push({
+                    "cluster":0,
+                    "color":i,
+                    "name": k,
+                    "count": groups[k],
+                    "size":groups[k]
+                });
+                i++;
+            }
+
+            return nodes;       
    	},
     processRoot: function(projects){
     		var groups = _.countBy(projects, function(d){
@@ -92,10 +112,10 @@ var bubble = d3.layout.pack()
     .padding(10);
 this.svg = d3.select("svg")
 			  .append("g")
-			    .attr("transform", "translate(650,20)")
-    .attr("width", diameter)
-    .attr("height", diameter)
-    .attr("class", "bubble");
+			    .attr("transform", "translate(675,80)")
+			    .attr("width", diameter)
+			    .attr("height", diameter)
+			    .attr("class", "bubble");
 
 var node = window.abreLatam.cloud.svg.selectAll(".node")
     .data(bubble.nodes(classes(root))
