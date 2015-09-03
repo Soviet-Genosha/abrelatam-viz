@@ -18,8 +18,6 @@ window.abreLatam.fociProjectsMap = {
 		var n = 200, // total number of nodes
 		    m = 3; // number of distinct clusters
 
-		var color = d3.scale.category10()
-		    .domain(d3.range(m));
 
 	
 		var nodes = projects.map(function(n,j){
@@ -39,7 +37,7 @@ window.abreLatam.fociProjectsMap = {
 			return{
 					n:n,
 					radius: maxRadius/2.5,
-			    	color: color(j),
+			    	color: window.abreLatam.cloud.getColorFor(n.Tipo2.trim()),
 			    	cx: xy[0],
 			   		cy: xy[1]		
 			};
