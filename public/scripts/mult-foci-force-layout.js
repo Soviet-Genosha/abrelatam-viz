@@ -43,37 +43,57 @@ window.abreLatam.fociProjectsMap = {
 			};
 		});
 
-		
 		var force = d3.layout.force()
-		    .nodes(nodes)
 		    .size([width, height])
-		    .gravity(0)
-		    .charge(0)
+			.gravity(0)
+		    .charge(0)//.charge(-120)
+		    
+		
+		force
+		    .nodes(nodes)
+			.links( window.abreLatam.relationships.links)
+		    .on('end', function() {
+			    // layout is done
+			    window.abreLatam.relationships.draw();
+			})
 		    .on("tick", tick)
 		    .start();
 
-		var circle = window.abreLatam.fociProjectsMap.circles = layer.selectAll("circle")
+		 var link = layer.selectAll(".link")
+	      .data(window.abreLatam.relationships.links)
+	    	.enter().append("line")
+	      .attr("class", "link")
+	      .style("stroke-width", function(d) { return 2; });
+
+		var circle = window.abreLatam.fociProjectsMap.circles = 
+		layer.selectAll("circle")
 		    .data(nodes)
 		  .enter().append("circle")
+		  	.attr('data-id' ,function(d,i){
+		  		return i;
+		  	})
 		  	.attr('class' ,function(d){
 		  		//cluster by city?
 		  		var c = (d.n.Pais + "-" + d.n.Ciudad).split(' ').join('-').toLowerCase();
+						  		
 		  		return c;
 		  	})
 		    .attr("r", function(d) { return d.radius; })
 		    .style("fill", function(d) { return d.color; })
-		    // .call(force.drag);
 		    .on('mouseover',showPopover)
 		    .on('mouseout',removePopovers);
 
 
 		function removePopovers () {
+			
 			var self      = d3.select(this);
           $('.popover').remove();
+          window.abreLatam.controller.hideRelated();
         }
 
-        function showPopover (d) {
-
+        function showPopover (d,i) {
+        
+        window.abreLatam.controller.showRelated(d,i);
         var self      = d3.select(this);
         
     	var projectTemplate = doT.template($( "script.projectTemplate" ).html());
@@ -90,6 +110,10 @@ window.abreLatam.fociProjectsMap = {
           $(self).popover('show');
         }
 		function tick(e) {
+		link.attr("x1", function(d) { return d.source.x; })
+	        .attr("y1", function(d) { return d.source.y; })
+	        .attr("x2", function(d) { return d.target.x; })
+	        .attr("y2", function(d) { return d.target.y; });
 		  circle
 		      .each(gravity(.2 * e.alpha))
 		      .each(collide(.5))

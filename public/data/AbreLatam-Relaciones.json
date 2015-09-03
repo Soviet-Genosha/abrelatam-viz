@@ -52,7 +52,17 @@
   {
     "Origen":"Cargografias",
     "Relacion":"con apoyo de",
-    "Destino":"MySociety"
+    "Destino":"Chicas poderosas Chile"
+  },
+   {
+    "Origen":"Cargografias",
+    "Relacion":"con apoyo de",
+    "Destino":"Slashroots"
+  },
+  {
+    "Origen":"Olabi",
+    "Relacion":"con apoyo de",
+    "Destino":"Slashroots"
   },
   {
     "Origen":"Chicas poderosas Chile",

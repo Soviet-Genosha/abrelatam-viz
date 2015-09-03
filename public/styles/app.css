@@ -31,6 +31,11 @@ svg:not(:hover) .airport-cell {
   stroke-opacity: .8;
 }
 
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}
+
 .datamap .airport-arcs path{
     stroke: #000 ;
     stroke-width: 1px;
