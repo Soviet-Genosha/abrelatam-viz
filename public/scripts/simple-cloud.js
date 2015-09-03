@@ -15,8 +15,12 @@ window.abreLatam.cloud = {
 
 		this.changebubble(root);
     },
+   	showAll: function(){
+   		var root = this.processRoot(this.projects);
+   		this.changebubble(root);
+   	},
     processRoot: function(projects){
-    	var groups = _.countBy(projects, function(d){
+    		var groups = _.countBy(projects, function(d){
                 return d.Tipo2.trim() === "" ? "N/A" : d.Tipo2 ;
             });
             var nodes = [];
@@ -24,6 +28,7 @@ window.abreLatam.cloud = {
             for(var k in groups){ 
                 nodes.push({
                     "cluster":0,
+                    "color":i,
                     "name": k,
                     "count": groups[k],
                     "size":groups[k]
@@ -41,19 +46,45 @@ window.abreLatam.cloud = {
     
     	this.projects = projects;
     	var root = this.processRoot(projects);
+    	this.setupColors(root);
 
-			
+    	this.reloadGraph(root);	
 
-			this.reloadGraph(root);	
 
+    },
+    getCategoryIndex: function(category){
+    	for (var i = 0; i < this.categories.length; i++) {
+    		if (this.categories[i].name === category){
+    			return i;
+    		}
+    	};
+    	return 0;
+    },
+    setupColors: function(root){
+    	
+
+    	window.abreLatam.cloud.categories = root.children.map(function(d,i){
+    		return{
+    			name:d.name,
+    			pos: i,
+    		}
+    	});
+
+    	window.abreLatam.cloud.color = 
+    		d3.scale.category20()
+		    .domain(d3.range(window.abreLatam.cloud.categories.length));
+    	
+
+    },
+
+    getColorFor:function(category){
+    	var i = window.abreLatam.cloud.getCategoryIndex(category);
+    	return  window.abreLatam.cloud.color(i);
     },
    	reloadGraph: function(root){
    		var diameter = 300,
     format = d3.format(",d");
 
-var color = d3.scale.ordinal()
-    .domain(["Sqoop", "Pig", "Apache", "a", "b", "c", "d", "e", "f", "g"])
-    .range(["steelblue", "pink", "lightgreen", "violet", "orangered", "green", "orange", "skyblue", "gray", "aqua"]);
 
 var bubble = d3.layout.pack()
     .sort(null)
@@ -87,7 +118,7 @@ node.append("circle")
     return d.r;
 })
     .style("fill", function (d, i) {
-    return color(i);
+    return window.abreLatam.cloud.getColorFor(d.className);
 });
 /* Create the text for each block */
     node.append("text")
@@ -142,8 +173,16 @@ this.changebubble= function (root) {
     nodeEnter
         .append("circle")
         .attr("r", function (d) {return d.r;})
-        .style("fill", function (d, i) {return color(i);})
+        .style("fill", function (d, i) {
+        	
+        	return window.abreLatam.cloud.getColorFor(d.className);
+        })
     
+    nodeEnter.append("text")
+        .attr("dx", function(d){return -20})
+	    .text(function(d){return d.className;})
+    
+
     // re-use enter selection for titles
     nodeEnter
         .append("title")
@@ -157,8 +196,14 @@ this.changebubble= function (root) {
             return d.r;
         })
         .style("fill", function (d, i) {
-            return color(i);
+            
+            return window.abreLatam.cloud.getColorFor(d.className);
         });
+    node.select("text")
+    	.transition().duration(1000)
+	    .attr("dx", function(d){return -20})
+	    .text(function(d){return d.className})
+
 
     node.transition().attr("class", "node")
         .attr("transform", function (d) {

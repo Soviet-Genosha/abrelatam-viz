@@ -53,5 +53,7 @@ window.abreLatam.controller = {
         showAll:function(){
             console.log('showAll');
             window.abreLatam.fociProjectsMap.showAll();
+             window.abreLatam.cloud.showAll();
+            
         }
 };
