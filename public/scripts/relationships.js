@@ -36,8 +36,8 @@ window.abreLatam.relationships = {
 		for (var i = 0; i < this.relationships.length; i++) {
 			var r  = this.relationships[i];
 			r.index = i;
-			r.source = this.getProjectId(r.Origen);
-			r.target = this.getProjectId(r.Destino);
+			r.source = this.getProjectId(r.Origen.toLowerCase());
+			r.target = this.getProjectId(r.Destino.toLowerCase());
 			if (r.source == -1 || r.target  == -1){
 				console.log('La relacion no tiene proyectos ',r.Origen,r.Destino);
 			}

@@ -44,14 +44,15 @@ window.abreLatam.fociProjectsMap = {
 		});
 
 		var force = d3.layout.force()
-		    .size([width, height])
-			.gravity(0)
-		    .charge(0)//.charge(-120)
+		    .linkDistance(600)
+	        .size([width, height])
+		    .gravity(0)
+    		.charge(0);
 		    
 		
 		force
 		    .nodes(nodes)
-			.links( window.abreLatam.relationships.links)
+			.links(window.abreLatam.relationships.links)
 		    .on('end', function() {
 			    // layout is done
 			    window.abreLatam.relationships.draw();
