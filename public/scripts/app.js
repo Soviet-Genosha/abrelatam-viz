@@ -48,6 +48,7 @@ window.abreLatam.controller = {
             var k =(c.country + "-" + c.city).split(' ').join('-').toLowerCase();
                 
             window.abreLatam.fociProjectsMap.showOnly(k.toLowerCase());
+            window.abreLatam.cloud.reload(c.country,c.city,k.toLowerCase());
         },
         showAll:function(){
             console.log('showAll');
