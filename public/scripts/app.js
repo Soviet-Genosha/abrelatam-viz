@@ -37,7 +37,7 @@ window.abreLatam.controller = {
             .defer(d3.json, "data/cities.json")
             .defer(d3.json, "data/us.json")
             .defer(d3.csv, "data/relations.csv")
-            .defer(d3.json,"data/abreLatam-relaciones.json")
+            .defer(d3.json,"data/AbreLatam-Relaciones.json")
             .await(ready);
 
     
