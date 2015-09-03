@@ -41,7 +41,7 @@ window.abreLatam.cloud = {
    	},
     processRoot: function(projects){
     		var groups = _.countBy(projects, function(d){
-                return d.Tipo2.trim() === "" ? "N/A" : d.Tipo2 ;
+                return d.Categoria.trim() === "" ? "N/A" : d.Categoria ;
             });
             var nodes = [];
             var i = 0;

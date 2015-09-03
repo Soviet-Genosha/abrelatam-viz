@@ -37,7 +37,7 @@ window.abreLatam.fociProjectsMap = {
 			return{
 					n:n,
 					radius: maxRadius/2.5,
-			    	color: window.abreLatam.cloud.getColorFor(n.Tipo2.trim()),
+			    	color: window.abreLatam.cloud.getColorFor(n.Categoria.trim()),
 			    	cx: xy[0],
 			   		cy: xy[1]		
 			};
@@ -98,7 +98,7 @@ window.abreLatam.fociProjectsMap = {
         var self      = d3.select(this);
         
     	var projectTemplate = doT.template($( "script.projectTemplate" ).html());
-      
+      	console.log(d);
           $(self).popover({
             placement: 'auto top',
             container: 'body',
