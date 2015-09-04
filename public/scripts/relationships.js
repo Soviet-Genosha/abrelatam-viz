@@ -56,7 +56,7 @@ window.abreLatam.relationships = {
 			d3.selectAll('circle.map-item')
 							.transition()
 							.duration(1000)
-							.attr('opacity',0);
+							.attr('opacity',0.2);
 
 			//Mostrar las relaciones
 				var selector = 'path[data-source="' + d.id + '"]';
