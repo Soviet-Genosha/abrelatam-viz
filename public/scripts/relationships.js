@@ -48,13 +48,33 @@ window.abreLatam.relationships = {
 			console.log('no relations for ',d.n.Nombre);
 		}
 		else {
-			//Mostrar los circulos
+			d3.selectAll('circle.map-item')
+							.transition()
+							.duration(1000)
+							.attr('opacity',0);
 
 			//Mostrar las relaciones
-			d3.selectAll('path.relationship')
-			.transition()
-			.duration(1000)
-			.attr('opacity',1);
+				var selector = 'path[data-source="' + d.id + '"]';
+				selector +=', ';
+				selector += 'path[data-target="'+ d.id + '"]';
+				d3.selectAll(selector)
+				 			.transition()
+							.duration(1000)
+							.attr('opacity',1);
+
+			//Mostrar los circulos
+			for (var i = 0; i < rel.length; i++) {
+
+				var r = rel[i];
+				var selector = 'circle.map-item[data-id="' + r.target + '"]';
+				selector +=', ';
+				selector += 'circle.map-item[data-id="'+ r.source + '"]';
+				d3.selectAll(selector)
+				 			.transition()
+							.duration(1000)
+							.attr('opacity',1);
+			};
+			
 		}
 
 	},
@@ -63,6 +83,11 @@ window.abreLatam.relationships = {
 			.transition()
 			.duration(1000)
 			.attr('opacity',0);
+		
+		d3.selectAll('circle.map-item')
+							.transition()
+							.duration(1000)
+							.attr('opacity',1);
 	},
 	processRelations: function(){
 		this.links = [];

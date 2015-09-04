@@ -77,7 +77,7 @@ window.abreLatam.fociProjectsMap = {
 		  	.attr('class' ,function(d){
 		  		//cluster by city?
 		  		var c = (d.n.Pais + "-" + d.n.Ciudad).split(' ').join('-').toLowerCase();
-						  		
+				c+= " map-item";  		
 		  		return c;
 		  	})
 		    .attr("r", function(d) { return d.radius; })
