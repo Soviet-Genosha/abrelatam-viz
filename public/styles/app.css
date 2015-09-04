@@ -20,11 +20,7 @@ body{
   pointer-events: none;
 }
 
-.airport:hover .airport-arcs {
-  display: inline;
-  stroke-dasharray: 5, 5;
-  stroke: transparent;
-}
+
 
 svg:not(:hover) .airport-cell {
   
@@ -48,6 +44,11 @@ svg:not(:hover) .airport-cell {
 path.airport circle{
     stroke: transparent ;
  	fill:transparent;
+}
+.datamap path.relationship{
+ stroke-dasharray: 5, 5;
+ stroke-width: 1px;
+  stroke: black;
 }
 
 

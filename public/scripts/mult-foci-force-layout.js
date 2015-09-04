@@ -52,7 +52,7 @@ window.abreLatam.fociProjectsMap = {
 		
 		force
 		    .nodes(nodes)
-			.links(window.abreLatam.relationships.links)
+			// .links(window.abreLatam.relationships.links)
 		    .on('end', function() {
 			    // layout is done
 			    window.abreLatam.relationships.draw();
@@ -60,11 +60,11 @@ window.abreLatam.fociProjectsMap = {
 		    .on("tick", tick)
 		    .start();
 
-		 var link = layer.selectAll(".link")
-	      .data(window.abreLatam.relationships.links)
-	    	.enter().append("line")
-	      .attr("class", "link")
-	      .style("stroke-width", function(d) { return 2; });
+		 // var link = layer.selectAll(".link")
+	  //     .data(window.abreLatam.relationships.links)
+	  //   	.enter().append("line")
+	  //     .attr("class", "link")
+	  //     .style("stroke-width", function(d) { return 2; });
 
 		var circle = window.abreLatam.fociProjectsMap.circles = 
 		layer.selectAll("circle")
@@ -111,10 +111,10 @@ window.abreLatam.fociProjectsMap = {
           $(self).popover('show');
         }
 		function tick(e) {
-		link.attr("x1", function(d) { return d.source.x; })
-	        .attr("y1", function(d) { return d.source.y; })
-	        .attr("x2", function(d) { return d.target.x; })
-	        .attr("y2", function(d) { return d.target.y; });
+		// link.attr("x1", function(d) { return d.source.x; })
+	 //        .attr("y1", function(d) { return d.source.y; })
+	 //        .attr("x2", function(d) { return d.target.x; })
+	 //        .attr("y2", function(d) { return d.target.y; });
 		  circle
 		      .each(gravity(.2 * e.alpha))
 		      .each(collide(.5))

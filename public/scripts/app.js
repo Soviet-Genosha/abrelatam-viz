@@ -15,7 +15,8 @@ window.abreLatam = window.abreLatam || {};
 window.abreLatam.controller = {
 
     load: function(){
-            var ready = function(error, projects, cities,us,voronoiCities,relationships){
+    
+    var ready = function(error, projects, cities,us,voronoiCities,relationships){
 
         var filterProjects = _.filter(projects, function(p) {
             if (!p.Ciudad){
@@ -24,11 +25,9 @@ window.abreLatam.controller = {
             return p.Ciudad;
         });
 
-
         window.abreLatam.map.load();
         window.abreLatam.relationships.load(filterProjects,relationships);
         window.abreLatam.cloud.load(filterProjects);
-        window.abreLatam.mapVoronoi.load(us, cities, voronoiCities);
         window.abreLatam.fociProjectsMap.load(window.abreLatam.map.map,cities,filterProjects);
         window.abreLatam.stats.load(filterProjects);        
     };

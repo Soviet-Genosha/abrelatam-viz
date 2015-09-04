@@ -14,6 +14,30 @@ window.abreLatam.relationships = {
                          .y(function(d) { return d.y; })
                          .interpolate("linear");
         //para cada relacion tengo que buscar origen y destino.
+        var linesXY = [];
+        for (var i = 0; i < this.links.length; i++) {
+        	var line= [];
+        	var s = this.links[i].source;
+        	var t = this.links[i].target;
+
+        	if (s !== t){
+        		var sCircle = d3.selectAll('circle[data-id="'+ s + '"]').data()[0];
+        		var tCircle = d3.selectAll('circle[data-id="'+ t + '"]').data()[0];
+        		line.push(sCircle);
+        		line.push(tCircle);
+        		linesXY.push(line);
+        	}
+        };
+        for (var i = 0; i < linesXY.length; i++) {
+        	var l = linesXY[i];
+        	var lineGraph =  d3.select("svg").append("path")
+        					.attr("class","relationship")
+                            .attr("d", lineFunction(l))
+                            .attr("stroke", "blue")
+                            .attr("stroke-width", 2)
+                            .attr("fill", "none");
+
+        };
 	},
 	show:function(d){
 		
@@ -44,7 +68,8 @@ window.abreLatam.relationships = {
 			else {
 				this.links.push(r);
 			}
-		};
+		}
+		console.log(this.links);
 		
 	},
 	getRelationsFor:function(k){
