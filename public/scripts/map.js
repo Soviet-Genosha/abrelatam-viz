@@ -42,7 +42,7 @@ window.abreLatam.map = {
                 .attr("x", 10)
                 .attr("y", 10)
                 .attr("width", 1025)
-                .attr("height", 800)
+                .attr("height", 1000)
         
     },
     setupBubbles: function(cities){

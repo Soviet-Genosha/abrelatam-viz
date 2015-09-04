@@ -2,6 +2,12 @@ body{
 	background-color: rgb(206, 211, 214);
 }
 
+main{
+  height: 100vh;
+}
+svg{
+  height: 100vh;
+}
 
 .airport-arcs {
   display: none;
@@ -9,6 +15,9 @@ body{
   stroke: #000;
 }
 
+circle, path{
+  cursor: pointer;
+}
 .airport-cell {
   fill: none;
   pointer-events: all;
