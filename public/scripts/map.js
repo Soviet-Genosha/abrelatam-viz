@@ -18,26 +18,37 @@ window.abreLatam.map = {
                 gt500: colors(Math.random() * 1)
             },
             geographyConfig:{
-                //dataUrl: '/scripts/latam.json', //ESTO DEBERIA CARGAR SOLO EL MAPA DE LATAM!
-             borderColor: '#e5e3df',
+                // dataUrl: '/scripts/latam.json', //ESTO DEBERIA CARGAR SOLO EL MAPA DE LATAM!
+                borderColor: '#e5e3df',
               highlightOnHover: true,
             },
             setProjection: function(element) {
                 this.projection = d3.geo.mercator() //ACA CAMBIE LA PROYECCION
                 .center([-15.85606,  -15.41684])
-              .rotate([2.4, 0])
-              .scale(375)
-              .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+              .rotate([2.7, 0])
+              .scale(450)
+              .translate([element.offsetWidth / 2
+                , element.offsetHeight / 1.5]);
             this.path = d3.geo.path()
                     .projection(this.projection);
     
             return {path: this.path, projection: this.projection};
         },
+         done: function(datamap) {
+            datamap.svg.selectAll('.datamaps-subunit')
+            .on('mouseover', function(geography) {
+                //Mostrar solo regionales.
+                window.abreLatam.controller.showOnlyByCountry(geography.properties.name);
+            })
+            .on('mouseout', function(geography){
+                window.abreLatam.controller.showAll();
+            })
+        },
         });
     //HACK: To hide the rest of the wolrd
     d3.select("svg")
                 .append("rect")
-                .attr("transform", "translate(500,-50)")
+                .attr("transform", "translate(600,-50)")
                 .attr("class","back")
                 .attr("x", 10)
                 .attr("y", 10)

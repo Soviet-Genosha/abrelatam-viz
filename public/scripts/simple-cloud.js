@@ -16,6 +16,18 @@ window.abreLatam.cloud = {
 		this.changebubble(root);
 		return window.abreLatam.cloud.filteredRoot;
     },
+    reloadCountry : function(country){
+        window.abreLatam.cloud.filteredRoot = _.filter(
+            this.projects, function(p) {
+                return p.Pais === country;
+        });
+        var root = this.processRoot(window.abreLatam.cloud.filteredRoot);
+
+        
+        this.changebubble(root);
+        return window.abreLatam.cloud.filteredRoot;
+    },
+
    	showAll: function(){
    		var root = this.processRoot(this.projects);
    		this.changebubble(root);

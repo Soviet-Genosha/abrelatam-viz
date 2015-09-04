@@ -96,7 +96,8 @@ window.abreLatam.fociProjectsMap = {
 		  	.attr('class' ,function(d){
 		  		//cluster by city?
 		  		var c = (d.n.Pais + "-" + d.n.Ciudad).split(' ').join('-').toLowerCase();
-				c+= " map-item";  		
+				c+= " map-item"; 
+				c+= " " + d.n.Pais.toLowerCase(); 		
 		  		return c;
 		  	})
 		    .attr("r", function(d) { return d.radius; })
@@ -188,12 +189,13 @@ window.abreLatam.fociProjectsMap = {
 		layer.selectAll('circle')
 			.transition()
 			.duration(1000)
-			.attr('opacity',0);
+			.attr('opacity',0.2);
 		layer.selectAll('circle.' + c + '')
 			.transition()
 			.duration(1000)
 			.attr('opacity',1);
 	},
+
 	showAll:function(){
 		var layer = window.abreLatam.fociProjectsMap.baseSvg ;
 		layer.selectAll('circle')

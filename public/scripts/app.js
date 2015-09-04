@@ -47,9 +47,14 @@ window.abreLatam.controller = {
         hideRelated: function(){
             window.abreLatam.relationships.hide();
         },
-        showOnly:function(c){
+        showOnlyByCountry:function(c){
+            window.abreLatam.fociProjectsMap.showOnly(c.toLowerCase());
+            var filtered = window.abreLatam.cloud.reloadCountry(c.country);
+
+            window.abreLatam.stats.showOnly(c.country, filtered);
+        },
+        showOnlyByCity:function(c){
             var k =(c.country + "-" + c.city).split(' ').join('-').toLowerCase();
-                
             window.abreLatam.fociProjectsMap.showOnly(k.toLowerCase());
             var filtered = window.abreLatam.cloud.reload(c.country,c.city,k.toLowerCase());
 

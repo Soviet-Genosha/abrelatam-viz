@@ -36,13 +36,14 @@ window.abreLatam.stats = {
 	showOnly:function(country,city,filtered){
 		window.abreLatam.stats.svg
 			.select('text.zona')
-			.text(city + "," + country);
+			.text(country);
 		
 		window.abreLatam.stats.svg
 			.select('text.count')
 			.text(filtered.length);
 
-		var organizations = window.abreLatam.cloud.countOrganizations(filtered);
+		var organizations = 
+			window.abreLatam.cloud.countOrganizations(filtered);
 
 		window.abreLatam.stats.svg
 			.select('text.organizaciones')
