@@ -22,9 +22,14 @@ window.abreLatam.relationships = {
         	if (s !== t){
         		var sCircle = d3.selectAll('circle[data-id="'+ s + '"]').data()[0];
         		var tCircle = d3.selectAll('circle[data-id="'+ t + '"]').data()[0];
-        		line.push(sCircle);
-        		line.push(tCircle);
-        		linesXY.push(line);
+        		if (!sCircle || !tCircle){
+        			console.log('Faltan proyectos para visualizar la relacion: ',this.links[i])
+        		}
+        		else {
+        			line.push(sCircle);
+        			line.push(tCircle);
+        			linesXY.push(line);
+        		}
         	}
         };
         for (var i = 0; i < linesXY.length; i++) {
