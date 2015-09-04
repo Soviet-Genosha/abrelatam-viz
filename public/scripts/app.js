@@ -49,16 +49,18 @@ window.abreLatam.controller = {
         },
         showOnlyByCountry:function(c){
             window.abreLatam.fociProjectsMap.showOnly(c.toLowerCase());
-            var filtered = window.abreLatam.cloud.reloadCountry(c.country);
-
-            window.abreLatam.stats.showOnly(c.country, filtered);
+            var filtered = window.abreLatam.cloud.reloadCountry(c);
+            if (filter.length > 0){
+                window.abreLatam.stats.showOnly(filtered,c);
+            }
         },
         showOnlyByCity:function(c){
             var k =(c.country + "-" + c.city).split(' ').join('-').toLowerCase();
             window.abreLatam.fociProjectsMap.showOnly(k.toLowerCase());
             var filtered = window.abreLatam.cloud.reload(c.country,c.city,k.toLowerCase());
-
-            window.abreLatam.stats.showOnly(c.country,c.city,filtered);
+            if (filter.length > 0){
+                window.abreLatam.stats.showOnly(filtered,c.country,c.city);
+            }
         },
         showAll:function(){
             window.abreLatam.fociProjectsMap.showAll();

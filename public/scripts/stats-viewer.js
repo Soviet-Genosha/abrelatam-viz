@@ -33,7 +33,7 @@ window.abreLatam.stats = {
 		this.showAll();
 
 	},
-	showOnly:function(country,city,filtered){
+	showOnly:function(filtered,country,city){
 		window.abreLatam.stats.svg
 			.select('text.zona')
 			.text(country);
