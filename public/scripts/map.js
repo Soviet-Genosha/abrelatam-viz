@@ -19,10 +19,10 @@ window.abreLatam.map = {
             },
             geographyConfig:{
              borderColor: '#e5e3df',
-              highlightOnHover: false,
+              highlightOnHover: true,
             },
             setProjection: function(element) {
-                this.projection = d3.geo.equirectangular()
+                this.projection = d3.geo.mercator()
                 .center([-15.85606,  -15.41684])
               .rotate([2.4, 0])
               .scale(375)
