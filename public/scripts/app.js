@@ -16,7 +16,7 @@ window.abreLatam.controller = {
 
     load: function(){
     
-    var ready = function(error, projects, cities,us,voronoiCities,relationships){
+    var ready = function(error, projects, cities,relationships){
 
         var filterProjects = _.filter(projects, function(p) {
             if (!p.Ciudad){
@@ -32,11 +32,9 @@ window.abreLatam.controller = {
         window.abreLatam.stats.load(filterProjects);        
     };
     queue()
-            .defer(d3.json, "data/abrelatam-v1.json")
-            .defer(d3.json, "data/cities.json")
-            .defer(d3.json, "data/us.json")
-            .defer(d3.csv, "data/relations.csv")
-            .defer(d3.json,"data/AbreLatam-Relaciones.json")
+            .defer(d3.json, "data/proyectos.json")
+            .defer(d3.json, "data/ciudades.json")
+            .defer(d3.json,"data/relaciones.json")
             .await(ready);
 
     

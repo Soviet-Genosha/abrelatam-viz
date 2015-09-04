@@ -26,23 +26,41 @@ window.abreLatam.fociProjectsMap = {
 
 			for (var i = 0; i < cities.length; i++) {
 	            		c = cities[i];
-	            		if (c.city === k){
+	            		if (c.Nombre.toLowerCase() === k.toLowerCase()){
 	            			n.geo = c;
+	            			
 	            		}
-	        };
 
+	        };
+	        if (!n.geo){
+	        	console.log("No encontre ciudad o pais",k);
+	        	return{
+						id:j,
+						n:n,
+						radius: maxRadius/2.5,
+				    	color: window.abreLatam.cloud.getColorFor(n.Categoria.trim()),
+				};
+	        }
+	        else {
+	        	var xy = self.latLngToXY(n.geo.Lat, n.geo.Lon);
 			
-			var xy = self.latLngToXY(n.geo.google.latitude, n.geo.google.longitude);
-			
-			return{
-					id:j,
-					n:n,
-					radius: maxRadius/2.5,
-			    	color: window.abreLatam.cloud.getColorFor(n.Categoria.trim()),
-			    	cx: xy[0],
-			   		cy: xy[1]		
-			};
+				return{
+						id:j,
+						n:n,
+						radius: maxRadius/2.5,
+				    	color: window.abreLatam.cloud.getColorFor(n.Categoria.trim()),
+				    	cx: xy[0],
+				   		cy: xy[1]		
+				};
+			}
+	
 		});
+		nodes =  _.filter(nodes, function(p) {
+            if (!p.n.geo){
+                console.log("El projecto " + p.n.Nombre + " no tiene posicion para" + p.n.Ciudad +" y no se lo podra visualizar");
+            }
+            return p.n.geo;
+        });
 
 		var force = d3.layout.force()
 		    .linkDistance(0)
@@ -50,6 +68,7 @@ window.abreLatam.fociProjectsMap = {
 		    .gravity(0)
     		.charge(0); 
 		    
+
 		
 		force
 		    .nodes(nodes)

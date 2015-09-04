@@ -1,0 +1,866 @@
+[
+  {
+    "Nombre":"Saint John's",
+    "Pais":"Antigua y Barbuda",
+    "Tipo":"capital",
+    "Codigo":"Saint John's, Antigua y Barbuda",
+    "LatLon":"17.1184569,-61.8448509",
+    "Lat":17.1184569,
+    "Lon":-61.8448509
+  },
+  {
+    "Nombre":"Rosario",
+    "Pais":"Argentina",
+    "Tipo":"ciudad",
+    "Codigo":"Rosario, Argentina",
+    "LatLon":"-32.9595004,-60.6615415",
+    "Lat":-32.9595004,
+    "Lon":-60.6615415
+  },
+  {
+    "Nombre":"Buenos Aires",
+    "Pais":"Argentina",
+    "Tipo":"capital",
+    "Codigo":"Buenos Aires, Argentina",
+    "LatLon":"-34.612869,-58.4459789",
+    "Lat":-34.612869,
+    "Lon":-58.4459789
+  },
+  {
+    "Nombre":"Córdoba",
+    "Pais":"Argentina",
+    "Tipo":"ciudad",
+    "Codigo":"Córdoba, Argentina",
+    "LatLon":"-31.4167753,-64.1836007",
+    "Lat":-31.4167753,
+    "Lon":-64.1836007
+  },
+  {
+    "Nombre":"Nassau",
+    "Pais":"Bahamas",
+    "Tipo":"capital",
+    "Codigo":"Nassau, Bahamas",
+    "LatLon":"25.0783456,-77.3383331",
+    "Lat":25.0783456,
+    "Lon":-77.3383331
+  },
+  {
+    "Nombre":"Bridgetown",
+    "Pais":"Barbados",
+    "Tipo":"capital",
+    "Codigo":"Bridgetown, Barbados",
+    "LatLon":"13.1018264,-59.618848",
+    "Lat":13.1018264,
+    "Lon":-59.618848
+  },
+  {
+    "Nombre":"Belmopán",
+    "Pais":"Belice",
+    "Tipo":"capital",
+    "Codigo":"Belmopán, Belice",
+    "LatLon":"17.250283,-88.7694263",
+    "Lat":17.250283,
+    "Lon":-88.7694263
+  },
+  {
+    "Nombre":"La Paz",
+    "Pais":"Bolivia",
+    "Tipo":"ciudad",
+    "Codigo":"La Paz, Bolivia",
+    "LatLon":"-16.495647,-68.133542",
+    "Lat":-16.495647,
+    "Lon":-68.133542
+  },
+  {
+    "Nombre":"Santa Cruz de la Sierra",
+    "Pais":"Bolivia",
+    "Tipo":"ciudad",
+    "Codigo":"Santa Cruz de la Sierra, Bolivia",
+    "LatLon":"-17.7836904,-63.1821038",
+    "Lat":-17.7836904,
+    "Lon":-63.1821038
+  },
+  {
+    "Nombre":"Sucre",
+    "Pais":"Bolivia",
+    "Tipo":"capital",
+    "Codigo":"Sucre, Bolivia",
+    "LatLon":"-19.047862,-65.2596023",
+    "Lat":-19.047862,
+    "Lon":-65.2596023
+  },
+  {
+    "Nombre":"Belém",
+    "Pais":"Brasil",
+    "Tipo":"ciudad",
+    "Codigo":"Belém, Brasil",
+    "LatLon":"-1.45056,-48.4682453",
+    "Lat":-1.45056,
+    "Lon":-48.4682453
+  },
+  {
+    "Nombre":"Brasilia",
+    "Pais":"Brasil",
+    "Tipo":"capital",
+    "Codigo":"Brasilia, Brasil",
+    "LatLon":"-10.3333333,-53.2",
+    "Lat":-10.3333333,
+    "Lon":-53.2
+  },
+  {
+    "Nombre":"Salvador de Bahía",
+    "Pais":"Brasil",
+    "Tipo":"ciudad",
+    "Codigo":"Salvador de Bahía, Brasil",
+    "LatLon":"-12.9816356,-38.4820771",
+    "Lat":-12.9816356,
+    "Lon":-38.4820771
+  },
+  {
+    "Nombre":"Goiânia",
+    "Pais":"Brasil",
+    "Tipo":"ciudad",
+    "Codigo":"Goiânia, Brasil",
+    "LatLon":"-16.680882,-49.2532691",
+    "Lat":-16.680882,
+    "Lon":-49.2532691
+  },
+  {
+    "Nombre":"Belo Horizonte",
+    "Pais":"Brasil",
+    "Tipo":"ciudad",
+    "Codigo":"Belo Horizonte, Brasil",
+    "LatLon":"-19.9227318,-43.9450948",
+    "Lat":-19.9227318,
+    "Lon":-43.9450948
+  },
+  {
+    "Nombre":"Vitória",
+    "Pais":"Brasil",
+    "Tipo":"ciudad",
+    "Codigo":"Vitória, Brasil",
+    "LatLon":"-20.2996826,-40.3016327",
+    "Lat":-20.2996826,
+    "Lon":-40.3016327
+  },
+  {
+    "Nombre":"Campinas",
+    "Pais":"Brasil",
+    "Tipo":"ciudad",
+    "Codigo":"Campinas, Brasil",
+    "LatLon":"-22.90556,-47.06083",
+    "Lat":-22.90556,
+    "Lon":-47.06083
+  },
+  {
+    "Nombre":"Río de Janeiro",
+    "Pais":"Brasil",
+    "Tipo":"ciudad",
+    "Codigo":"Río de Janeiro, Brasil",
+    "LatLon":"-22.9110137,-43.2093727",
+    "Lat":-22.9110137,
+    "Lon":-43.2093727
+  },
+  {
+    "Nombre":"São Paulo",
+    "Pais":"Brasil",
+    "Tipo":"ciudad",
+    "Codigo":"São Paulo, Brasil",
+    "LatLon":"-23.5506507,-46.6333824",
+    "Lat":-23.5506507,
+    "Lon":-46.6333824
+  },
+  {
+    "Nombre":"Santos",
+    "Pais":"Brasil",
+    "Tipo":"ciudad",
+    "Codigo":"Santos, Brasil",
+    "LatLon":"-23.960833,-46.333889",
+    "Lat":-23.960833,
+    "Lon":-46.333889
+  },
+  {
+    "Nombre":"Curitiba",
+    "Pais":"Brasil",
+    "Tipo":"ciudad",
+    "Codigo":"Curitiba, Brasil",
+    "LatLon":"-25.4286927,-49.272373",
+    "Lat":-25.4286927,
+    "Lon":-49.272373
+  },
+  {
+    "Nombre":"Florianópolis",
+    "Pais":"Brasil",
+    "Tipo":"ciudad",
+    "Codigo":"Florianópolis, Brasil",
+    "LatLon":"-27.5973002,-48.5496098",
+    "Lat":-27.5973002,
+    "Lon":-48.5496098
+  },
+  {
+    "Nombre":"Manaos",
+    "Pais":"Brasil",
+    "Tipo":"ciudad",
+    "Codigo":"Manaos, Brasil",
+    "LatLon":"-3.1328619,-59.9865291",
+    "Lat":-3.1328619,
+    "Lon":-59.9865291
+  },
+  {
+    "Nombre":"Fortaleza",
+    "Pais":"Brasil",
+    "Tipo":"ciudad",
+    "Codigo":"Fortaleza, Brasil",
+    "LatLon":"-3.7304512,-38.5217989",
+    "Lat":-3.7304512,
+    "Lon":-38.5217989
+  },
+  {
+    "Nombre":"Porto Alegre",
+    "Pais":"Brasil",
+    "Tipo":"ciudad",
+    "Codigo":"Porto Alegre, Brasil",
+    "LatLon":"-30.0282677,-51.2284299",
+    "Lat":-30.0282677,
+    "Lon":-51.2284299
+  },
+  {
+    "Nombre":"Natal",
+    "Pais":"Brasil",
+    "Tipo":"ciudad",
+    "Codigo":"Natal, Brasil",
+    "LatLon":"-5.805398,-35.2080905",
+    "Lat":-5.805398,
+    "Lon":-35.2080905
+  },
+  {
+    "Nombre":"João Pessoa",
+    "Pais":"Brasil",
+    "Tipo":"ciudad",
+    "Codigo":"João Pessoa, Brasil",
+    "LatLon":"-7.1147841,-34.8897979",
+    "Lat":-7.1147841,
+    "Lon":-34.8897979
+  },
+  {
+    "Nombre":"Recife",
+    "Pais":"Brasil",
+    "Tipo":"ciudad",
+    "Codigo":"Recife, Brasil",
+    "LatLon":"-8.0581077,-34.8979047",
+    "Lat":-8.0581077,
+    "Lon":-34.8979047
+  },
+  {
+    "Nombre":"Maceió",
+    "Pais":"Brasil",
+    "Tipo":"ciudad",
+    "Codigo":"Maceió, Brasil",
+    "LatLon":"-9.6476843,-35.7339264",
+    "Lat":-9.6476843,
+    "Lon":-35.7339264
+  },
+  {
+    "Nombre":"Valparaíso",
+    "Pais":"Chile",
+    "Tipo":"ciudad",
+    "Codigo":"Valparaíso, Chile",
+    "LatLon":"-33.0462475,-71.6198032",
+    "Lat":-33.0462475,
+    "Lon":-71.6198032
+  },
+  {
+    "Nombre":"Santiago de Chile",
+    "Pais":"Chile",
+    "Tipo":"capital",
+    "Codigo":"Santiago de Chile, Chile",
+    "LatLon":"-33.437913,-70.6504558",
+    "Lat":-33.437913,
+    "Lon":-70.6504558
+  },
+  {
+    "Nombre":"Concepción",
+    "Pais":"Chile",
+    "Tipo":"ciudad",
+    "Codigo":"Concepción, Chile",
+    "LatLon":"-36.8268041,-73.0504239",
+    "Lat":-36.8268041,
+    "Lon":-73.0504239
+  },
+  {
+    "Nombre":"Cartagena de Indias",
+    "Pais":"Colombia",
+    "Tipo":"ciudad",
+    "Codigo":"Cartagena de Indias, Colombia",
+    "LatLon":"10.4131792,-75.48929446",
+    "Lat":10.4131792,
+    "Lon":-75.48929446
+  },
+  {
+    "Nombre":"Barranquilla",
+    "Pais":"Colombia",
+    "Tipo":"ciudad",
+    "Codigo":"Barranquilla, Colombia",
+    "LatLon":"10.979932,-74.7957384",
+    "Lat":10.979932,
+    "Lon":-74.7957384
+  },
+  {
+    "Nombre":"Santiago de Cali",
+    "Pais":"Colombia",
+    "Tipo":"ciudad",
+    "Codigo":"Santiago de Cali, Colombia",
+    "LatLon":"3.4319329,-76.5113048",
+    "Lat":3.4319329,
+    "Lon":-76.5113048
+  },
+  {
+    "Nombre":"Bogotá",
+    "Pais":"Colombia",
+    "Tipo":"capital",
+    "Codigo":"Bogotá, Colombia",
+    "LatLon":"4.5980478,-74.0760867",
+    "Lat":4.5980478,
+    "Lon":-74.0760867
+  },
+  {
+    "Nombre":"Medellín",
+    "Pais":"Colombia",
+    "Tipo":"ciudad",
+    "Codigo":"Medellín, Colombia",
+    "LatLon":"6.2443382,-75.573553",
+    "Lat":6.2443382,
+    "Lon":-75.573553
+  },
+  {
+    "Nombre":"Bucaramanga",
+    "Pais":"Colombia",
+    "Tipo":"ciudad",
+    "Codigo":"Bucaramanga, Colombia",
+    "LatLon":"7.16666325,-73.10447657",
+    "Lat":7.16666325,
+    "Lon":-73.10447657
+  },
+  {
+    "Nombre":"San José",
+    "Pais":"Costa Rica",
+    "Tipo":"capital",
+    "Codigo":"San José, Costa Rica",
+    "LatLon":"9.9325427,-84.0795782",
+    "Lat":9.9325427,
+    "Lon":-84.0795782
+  },
+  {
+    "Nombre":"La Habana",
+    "Pais":"Cuba",
+    "Tipo":"capital",
+    "Codigo":"La Habana, Cuba",
+    "LatLon":"23.1379911,-82.3658562",
+    "Lat":23.1379911,
+    "Lon":-82.3658562
+  },
+  {
+    "Nombre":"Roseau",
+    "Pais":"Dominica",
+    "Tipo":"capital",
+    "Codigo":"Roseau, Dominica",
+    "LatLon":"15.2984622,-61.3875049",
+    "Lat":15.2984622,
+    "Lon":-61.3875049
+  },
+  {
+    "Nombre":"Quito",
+    "Pais":"Ecuador",
+    "Tipo":"capital",
+    "Codigo":"Quito, Ecuador",
+    "LatLon":"-0.2201687,-78.5120913",
+    "Lat":-0.2201687,
+    "Lon":-78.5120913
+  },
+  {
+    "Nombre":"Guayaquil",
+    "Pais":"Ecuador",
+    "Tipo":"ciudad",
+    "Codigo":"Guayaquil, Ecuador",
+    "LatLon":"-2.2124357,-79.895812",
+    "Lat":-2.2124357,
+    "Lon":-79.895812
+  },
+  {
+    "Nombre":"San Salvador",
+    "Pais":"El Salvador",
+    "Tipo":"capital",
+    "Codigo":"San Salvador, El Salvador",
+    "LatLon":"13.6977587,-89.19301",
+    "Lat":13.6977587,
+    "Lon":-89.19301
+  },
+  {
+    "Nombre":"Saint George's",
+    "Pais":"Granada",
+    "Tipo":"capital",
+    "Codigo":"Saint George's, Granada",
+    "LatLon":"12.0535331,-61.751805",
+    "Lat":12.0535331,
+    "Lon":-61.751805
+  },
+  {
+    "Nombre":"Ciudad de Guatemala",
+    "Pais":"Guatemala",
+    "Tipo":"capital",
+    "Codigo":"Ciudad de Guatemala, Guatemala",
+    "LatLon":"14.6417889,-90.5132239",
+    "Lat":14.6417889,
+    "Lon":-90.5132239
+  },
+  {
+    "Nombre":"Georgetown",
+    "Pais":"Guyana",
+    "Tipo":"capital",
+    "Codigo":"Georgetown, Guyana",
+    "LatLon":"6.8025766,-58.1628612",
+    "Lat":6.8025766,
+    "Lon":-58.1628612
+  },
+  {
+    "Nombre":"Puerto Príncipe",
+    "Pais":"Haití",
+    "Tipo":"capital",
+    "Codigo":"Puerto Príncipe, Haití",
+    "LatLon":"18.547327,-72.3395928",
+    "Lat":18.547327,
+    "Lon":-72.3395928
+  },
+  {
+    "Nombre":"Tegucigalpa",
+    "Pais":"Honduras",
+    "Tipo":"capital",
+    "Codigo":"Tegucigalpa, Honduras",
+    "LatLon":"14.0931919,-87.2012631",
+    "Lat":14.0931919,
+    "Lon":-87.2012631
+  },
+  {
+    "Nombre":"Kingston",
+    "Pais":"Jamaica",
+    "Tipo":"capital",
+    "Codigo":"Kingston, Jamaica",
+    "LatLon":"17.9712148,-76.7928128",
+    "Lat":17.9712148,
+    "Lon":-76.7928128
+  },
+  {
+    "Nombre":"León",
+    "Pais":"México",
+    "Tipo":"ciudad",
+    "Codigo":"León, México",
+    "LatLon":"21.0973353,-101.6476422",
+    "Lat":21.0973353,
+    "Lon":-101.6476422
+  },
+  {
+    "Nombre":"Puebla",
+    "Pais":"México",
+    "Tipo":"ciudad",
+    "Codigo":"Puebla, México",
+    "LatLon":"18.833333,-98",
+    "Lat":18.833333,
+    "Lon":-98
+  },
+  {
+    "Nombre":"Toluca",
+    "Pais":"México",
+    "Tipo":"ciudad",
+    "Codigo":"Toluca, México",
+    "LatLon":"19.292545,-99.6569007",
+    "Lat":19.292545,
+    "Lon":-99.6569007
+  },
+  {
+    "Nombre":"Juárez",
+    "Pais":"México",
+    "Tipo":"ciudad",
+    "Codigo":"Juárez, México",
+    "LatLon":"19.29348285,-100.4645924",
+    "Lat":19.29348285,
+    "Lon":-100.4645924
+  },
+  {
+    "Nombre":"Ciudad de Mexico",
+    "Pais":"México",
+    "Tipo":"capital",
+    "Codigo":"Ciudad de Mexico, México",
+    "LatLon":"19.4325301,-99.1332102",
+    "Lat":19.4325301,
+    "Lon":-99.1332102
+  },
+  {
+    "Nombre":"Torreón",
+    "Pais":"México",
+    "Tipo":"ciudad",
+    "Codigo":"Torreón, México",
+    "LatLon":"25.5414662,-103.4531977",
+    "Lat":25.5414662,
+    "Lon":-103.4531977
+  },
+  {
+    "Nombre":"Monterrey",
+    "Pais":"México",
+    "Tipo":"ciudad",
+    "Codigo":"Monterrey, México",
+    "LatLon":"25.6764922,-100.3060829",
+    "Lat":25.6764922,
+    "Lon":-100.3060829
+  },
+  {
+    "Nombre":"Tijuana",
+    "Pais":"México",
+    "Tipo":"ciudad",
+    "Codigo":"Tijuana, México",
+    "LatLon":"32.5344409,-117.0393788",
+    "Lat":32.5344409,
+    "Lon":-117.0393788
+  },
+  {
+    "Nombre":"Guadalajara",
+    "Pais":"México",
+    "Tipo":"ciudad",
+    "Codigo":"Guadalajara, México",
+    "LatLon":"20.676143,-103.3469982",
+    "Lat":20.676143,
+    "Lon":-103.3469982
+  },
+  {
+    "Nombre":"Managua",
+    "Pais":"Nicaragua",
+    "Tipo":"capital",
+    "Codigo":"Managua, Nicaragua",
+    "LatLon":"12.1461244,-86.273717",
+    "Lat":12.1461244,
+    "Lon":-86.273717
+  },
+  {
+    "Nombre":"Panamá City",
+    "Pais":"Panamá",
+    "Tipo":"capital",
+    "Codigo":"Panamá City, Panamá",
+    "LatLon":"8.9707433,-79.5344539",
+    "Lat":8.9707433,
+    "Lon":-79.5344539
+  },
+  {
+    "Nombre":"Asunción",
+    "Pais":"Paraguay",
+    "Tipo":"capital",
+    "Codigo":"Asunción, Paraguay",
+    "LatLon":"-25.2960638,-57.6311446",
+    "Lat":-25.2960638,
+    "Lon":-57.6311446
+  },
+  {
+    "Nombre":"Lima",
+    "Pais":"Perú",
+    "Tipo":"capital",
+    "Codigo":"Lima, Perú",
+    "LatLon":"-12,-76.833333",
+    "Lat":-12,
+    "Lon":-76.833333
+  },
+  {
+    "Nombre":"Arequipa",
+    "Pais":"Perú",
+    "Tipo":"ciudad",
+    "Codigo":"Arequipa, Perú",
+    "LatLon":"-16.333333,-71.5",
+    "Lat":-16.333333,
+    "Lon":-71.5
+  },
+  {
+    "Nombre":"San Juan",
+    "Pais":"Puerto Rico",
+    "Tipo":"capital",
+    "Codigo":"San Juan, Puerto Rico",
+    "LatLon":"18.38423905,-66.05343987",
+    "Lat":18.38423905,
+    "Lon":-66.05343987
+  },
+  {
+    "Nombre":"Santo Domingo",
+    "Pais":"República Dominicana",
+    "Tipo":"capital",
+    "Codigo":"Santo Domingo, República Dominicana",
+    "LatLon":"18.4801972,-69.942111",
+    "Lat":18.4801972,
+    "Lon":-69.942111
+  },
+  {
+    "Nombre":"Paramaribo",
+    "Pais":"Surinam",
+    "Tipo":"capital",
+    "Codigo":"Paramaribo, Surinam",
+    "LatLon":"5.8216198,-55.1771974",
+    "Lat":5.8216198,
+    "Lon":-55.1771974
+  },
+  {
+    "Nombre":"Puerto España",
+    "Pais":"Trinidad y Tobago",
+    "Tipo":"capital",
+    "Codigo":"Puerto España, Trinidad y Tobago",
+    "LatLon":"-27.0509077,-55.4491036",
+    "Lat":-27.0509077,
+    "Lon":-55.4491036
+  },
+  {
+    "Nombre":"Montevideo",
+    "Pais":"Uruguay",
+    "Tipo":"capital",
+    "Codigo":"Montevideo, Uruguay",
+    "LatLon":"-34.9059039,-56.1913569",
+    "Lat":-34.9059039,
+    "Lon":-56.1913569
+  },
+  {
+    "Nombre":"Barquisimeto",
+    "Pais":"Venezuela",
+    "Tipo":"ciudad",
+    "Codigo":"Barquisimeto, Venezuela",
+    "LatLon":"10.0740372,-69.3215667",
+    "Lat":10.0740372,
+    "Lon":-69.3215667
+  },
+  {
+    "Nombre":"Maracay",
+    "Pais":"Venezuela",
+    "Tipo":"ciudad",
+    "Codigo":"Maracay, Venezuela",
+    "LatLon":"10.2513662,-67.6017245",
+    "Lat":10.2513662,
+    "Lon":-67.6017245
+  },
+  {
+    "Nombre":"Caracas",
+    "Pais":"Venezuela",
+    "Tipo":"capital",
+    "Codigo":"Caracas, Venezuela",
+    "LatLon":"10.506098,-66.9146017",
+    "Lat":10.506098,
+    "Lon":-66.9146017
+  },
+  {
+    "Nombre":"Maracaibo",
+    "Pais":"Venezuela",
+    "Tipo":"ciudad",
+    "Codigo":"Maracaibo, Venezuela",
+    "LatLon":"10.6651557,-71.6230753",
+    "Lat":10.6651557,
+    "Lon":-71.6230753
+  },
+  {
+    "Nombre":"San Cristobal",
+    "Pais":"Venezuela",
+    "Tipo":"ciudad",
+    "Codigo":"San Cristobal, Venezuela",
+    "LatLon":"7.7756463,-72.2213001",
+    "Lat":7.7756463,
+    "Lon":-72.2213001
+  },
+  {
+    "Nombre":"Valencia",
+    "Pais":"Venezuela",
+    "Tipo":"ciudad",
+    "Codigo":"Valencia, Venezuela",
+    "LatLon":"10.1704877,-68.0011214",
+    "Lat":10.1704877,
+    "Lon":-68.0011214
+  },
+  {
+    "Nombre":"Ciudad Guayana",
+    "Pais":"Venezuela",
+    "Tipo":"ciudad",
+    "Codigo":"Ciudad Guayana, Venezuela",
+    "LatLon":"8.3389155,-62.7132656",
+    "Lat":8.3389155,
+    "Lon":-62.7132656
+  },
+  {
+    "Nombre":"Ecuador",
+    "Pais":"Ecuador",
+    "Tipo":"pais",
+    "Codigo":"Ecuador",
+    "LatLon":"-1.3397668,-79.3666965",
+    "Lat":-1.3397668,
+    "Lon":-79.3666965
+  },
+  {
+    "Nombre":"Brasil",
+    "Pais":"Brasil",
+    "Tipo":"pais",
+    "Codigo":"Brasil",
+    "LatLon":"-10.3333333,-53.2",
+    "Lat":-10.3333333,
+    "Lon":-53.2
+  },
+  {
+    "Nombre":"Bolivia",
+    "Pais":"Bolivia",
+    "Tipo":"pais",
+    "Codigo":"Bolivia",
+    "LatLon":"-17.0568696,-64.9912286",
+    "Lat":-17.0568696,
+    "Lon":-64.9912286
+  },
+  {
+    "Nombre":"Paraguay",
+    "Pais":"Paraguay",
+    "Tipo":"pais",
+    "Codigo":"Paraguay",
+    "LatLon":"-23.3165935,-58.1693445",
+    "Lat":-23.3165935,
+    "Lon":-58.1693445
+  },
+  {
+    "Nombre":"Chile",
+    "Pais":"Chile",
+    "Tipo":"pais",
+    "Codigo":"Chile",
+    "LatLon":"-31.7613365,-71.3187697",
+    "Lat":-31.7613365,
+    "Lon":-71.3187697
+  },
+  {
+    "Nombre":"Uruguay",
+    "Pais":"Uruguay",
+    "Tipo":"pais",
+    "Codigo":"Uruguay",
+    "LatLon":"-32.8755548,-56.0201525",
+    "Lat":-32.8755548,
+    "Lon":-56.0201525
+  },
+  {
+    "Nombre":"Argentina",
+    "Pais":"Argentina",
+    "Tipo":"pais",
+    "Codigo":"Argentina",
+    "LatLon":"-35.1124869,-65.241974",
+    "Lat":-35.1124869,
+    "Lon":-65.241974
+  },
+  {
+    "Nombre":"Perú",
+    "Pais":"Perú",
+    "Tipo":"pais",
+    "Codigo":"Perú",
+    "LatLon":"-6.8699697,-75.0458515",
+    "Lat":-6.8699697,
+    "Lon":-75.0458515
+  },
+  {
+    "Nombre":"Costa Rica",
+    "Pais":"Costa Rica",
+    "Tipo":"pais",
+    "Codigo":"Costa Rica",
+    "LatLon":"10.2735633,-84.0739102",
+    "Lat":10.2735633,
+    "Lon":-84.0739102
+  },
+  {
+    "Nombre":"Nicaragua",
+    "Pais":"Nicaragua",
+    "Tipo":"pais",
+    "Codigo":"Nicaragua",
+    "LatLon":"12.3724928,-84.8700308",
+    "Lat":12.3724928,
+    "Lon":-84.8700308
+  },
+  {
+    "Nombre":"El Salvador",
+    "Pais":"El Salvador",
+    "Tipo":"pais",
+    "Codigo":"El Salvador",
+    "LatLon":"13.8000382,-88.9140683",
+    "Lat":13.8000382,
+    "Lon":-88.9140683
+  },
+  {
+    "Nombre":"Honduras",
+    "Pais":"Honduras",
+    "Tipo":"pais",
+    "Codigo":"Honduras",
+    "LatLon":"15.0610686,-84.5978534",
+    "Lat":15.0610686,
+    "Lon":-84.5978534
+  },
+  {
+    "Nombre":"Guatemala",
+    "Pais":"Guatemala",
+    "Tipo":"pais",
+    "Codigo":"Guatemala",
+    "LatLon":"15.6356088,-89.8988087",
+    "Lat":15.6356088,
+    "Lon":-89.8988087
+  },
+  {
+    "Nombre":"República Dominicana",
+    "Pais":"República Dominicana",
+    "Tipo":"pais",
+    "Codigo":"República Dominicana",
+    "LatLon":"19.094175,-70.3012705",
+    "Lat":19.094175,
+    "Lon":-70.3012705
+  },
+  {
+    "Nombre":"Haití",
+    "Pais":"Haití",
+    "Tipo":"pais",
+    "Codigo":"Haití",
+    "LatLon":"19.1399952,-72.3570972",
+    "Lat":19.1399952,
+    "Lon":-72.3570972
+  },
+  {
+    "Nombre":"México",
+    "Pais":"México",
+    "Tipo":"pais",
+    "Codigo":"México",
+    "LatLon":"19.4325301,-99.1332102",
+    "Lat":19.4325301,
+    "Lon":-99.1332102
+  },
+  {
+    "Nombre":"Colombia",
+    "Pais":"Colombia",
+    "Tipo":"pais",
+    "Codigo":"Colombia",
+    "LatLon":"2.8930783,-73.7845072",
+    "Lat":2.8930783,
+    "Lon":-73.7845072
+  },
+  {
+    "Nombre":"Cuba",
+    "Pais":"Cuba",
+    "Tipo":"pais",
+    "Codigo":"Cuba",
+    "LatLon":"23.0131338,-80.8328748",
+    "Lat":23.0131338,
+    "Lon":-80.8328748
+  },
+  {
+    "Nombre":"Venezuela",
+    "Pais":"Venezuela",
+    "Tipo":"pais",
+    "Codigo":"Venezuela",
+    "LatLon":"8.0018709,-66.1109318",
+    "Lat":8.0018709,
+    "Lon":-66.1109318
+  },
+  {
+    "Nombre":"Panama",
+    "Pais":"Panama",
+    "Tipo":"pais",
+    "Codigo":"Panama",
+    "LatLon":"8.3096067,-81.3066246",
+    "Lat":8.3096067,
+    "Lon":-81.3066246
+  }
+]
