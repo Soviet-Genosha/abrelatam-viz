@@ -18,11 +18,12 @@ window.abreLatam.map = {
                 gt500: colors(Math.random() * 1)
             },
             geographyConfig:{
+                //dataUrl: '/scripts/latam.json', //ESTO DEBERIA CARGAR SOLO EL MAPA DE LATAM!
              borderColor: '#e5e3df',
               highlightOnHover: true,
             },
             setProjection: function(element) {
-                this.projection = d3.geo.mercator()
+                this.projection = d3.geo.mercator() //ACA CAMBIE LA PROYECCION
                 .center([-15.85606,  -15.41684])
               .rotate([2.4, 0])
               .scale(375)
@@ -45,8 +46,6 @@ window.abreLatam.map = {
         
     },
     setupBubbles: function(cities){
-
-        
 
             var bubbles = []
             for (var i = 0; i < cities.length; i++) {
