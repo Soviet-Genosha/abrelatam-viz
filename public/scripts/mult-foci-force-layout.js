@@ -35,6 +35,7 @@ window.abreLatam.fociProjectsMap = {
 			var xy = self.latLngToXY(n.geo.google.latitude, n.geo.google.longitude);
 			
 			return{
+					id:j,
 					n:n,
 					radius: maxRadius/2.5,
 			    	color: window.abreLatam.cloud.getColorFor(n.Categoria.trim()),

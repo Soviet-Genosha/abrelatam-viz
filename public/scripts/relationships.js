@@ -8,7 +8,6 @@ window.abreLatam.relationships = {
 		this.processRelations();
 	},
 	draw:function(){
-		
 		var lineFunction = d3.svg.line()
                          .x(function(d) { return d.x; })
                          .y(function(d) { return d.y; })
@@ -31,8 +30,11 @@ window.abreLatam.relationships = {
         for (var i = 0; i < linesXY.length; i++) {
         	var l = linesXY[i];
         	var lineGraph =  d3.select("svg").append("path")
+        					.attr('data-source',l[0].id)
+        					.attr('data-target',l[1].id)
         					.attr("class","relationship")
                             .attr("d", lineFunction(l))
+                            .attr("opacity",0)
                             .attr("stroke", "blue")
                             .attr("stroke-width", 2)
                             .attr("fill", "none");
@@ -49,11 +51,18 @@ window.abreLatam.relationships = {
 			//Mostrar los circulos
 
 			//Mostrar las relaciones
+			d3.selectAll('path.relationship')
+			.transition()
+			.duration(1000)
+			.attr('opacity',1);
 		}
 
 	},
 	hide:function(){
-		console.log('hide relations');
+		d3.selectAll('path.relationship')
+			.transition()
+			.duration(1000)
+			.attr('opacity',0);
 	},
 	processRelations: function(){
 		this.links = [];
