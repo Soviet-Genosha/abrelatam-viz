@@ -32,9 +32,9 @@ window.abreLatam.controller = {
         window.abreLatam.stats.load(filterProjects);        
     };
     queue()
-            .defer(d3.json, "data/proyectos.json")
-            .defer(d3.json, "data/ciudades.json")
-            .defer(d3.json,"data/relaciones.json")
+            .defer(d3.csv, "data/proyectos.csv")
+            .defer(d3.csv, "data/ciudades.csv")
+            .defer(d3.csv,"data/relaciones.csv")
             .await(ready);
 
     

@@ -1,0 +1,98 @@
+Nombre,Pais,Tipo,Codigo,LatLon,Lat,Lon
+Saint John's,Antigua y Barbuda,capital,"Saint John's, Antigua y Barbuda","17.1184569,-61.8448509",17.1184569,-61.8448509
+Rosario,Argentina,ciudad,"Rosario, Argentina","-32.9595004,-60.6615415",-32.9595004,-60.6615415
+Buenos Aires,Argentina,capital,"Buenos Aires, Argentina","-34.612869,-58.4459789",-34.612869,-58.4459789
+Córdoba,Argentina,ciudad,"Córdoba, Argentina","-31.4167753,-64.1836007",-31.4167753,-64.1836007
+Nassau,Bahamas,capital,"Nassau, Bahamas","25.0783456,-77.3383331",25.0783456,-77.3383331
+Bridgetown,Barbados,capital,"Bridgetown, Barbados","13.1018264,-59.618848",13.1018264,-59.618848
+Belmopán,Belice,capital,"Belmopán, Belice","17.250283,-88.7694263",17.250283,-88.7694263
+La Paz,Bolivia,ciudad,"La Paz, Bolivia","-16.495647,-68.133542",-16.495647,-68.133542
+Santa Cruz de la Sierra,Bolivia,ciudad,"Santa Cruz de la Sierra, Bolivia","-17.7836904,-63.1821038",-17.7836904,-63.1821038
+Sucre,Bolivia,capital,"Sucre, Bolivia","-19.047862,-65.2596023",-19.047862,-65.2596023
+Belém,Brasil,ciudad,"Belém, Brasil","-1.45056,-48.4682453",-1.45056,-48.4682453
+Brasilia,Brasil,capital,"Brasilia, Brasil","-10.3333333,-53.2",-10.3333333,-53.2
+Salvador de Bahía,Brasil,ciudad,"Salvador de Bahía, Brasil","-12.9816356,-38.4820771",-12.9816356,-38.4820771
+Goiânia,Brasil,ciudad,"Goiânia, Brasil","-16.680882,-49.2532691",-16.680882,-49.2532691
+Belo Horizonte,Brasil,ciudad,"Belo Horizonte, Brasil","-19.9227318,-43.9450948",-19.9227318,-43.9450948
+Vitória,Brasil,ciudad,"Vitória, Brasil","-20.2996826,-40.3016327",-20.2996826,-40.3016327
+Campinas,Brasil,ciudad,"Campinas, Brasil","-22.90556,-47.06083",-22.90556,-47.06083
+Río de Janeiro,Brasil,ciudad,"Río de Janeiro, Brasil","-22.9110137,-43.2093727",-22.9110137,-43.2093727
+São Paulo,Brasil,ciudad,"São Paulo, Brasil","-23.5506507,-46.6333824",-23.5506507,-46.6333824
+Santos,Brasil,ciudad,"Santos, Brasil","-23.960833,-46.333889",-23.960833,-46.333889
+Curitiba,Brasil,ciudad,"Curitiba, Brasil","-25.4286927,-49.272373",-25.4286927,-49.272373
+Florianópolis,Brasil,ciudad,"Florianópolis, Brasil","-27.5973002,-48.5496098",-27.5973002,-48.5496098
+Manaos,Brasil,ciudad,"Manaos, Brasil","-3.1328619,-59.9865291",-3.1328619,-59.9865291
+Fortaleza,Brasil,ciudad,"Fortaleza, Brasil","-3.7304512,-38.5217989",-3.7304512,-38.5217989
+Porto Alegre,Brasil,ciudad,"Porto Alegre, Brasil","-30.0282677,-51.2284299",-30.0282677,-51.2284299
+Natal,Brasil,ciudad,"Natal, Brasil","-5.805398,-35.2080905",-5.805398,-35.2080905
+João Pessoa,Brasil,ciudad,"João Pessoa, Brasil","-7.1147841,-34.8897979",-7.1147841,-34.8897979
+Recife,Brasil,ciudad,"Recife, Brasil","-8.0581077,-34.8979047",-8.0581077,-34.8979047
+Maceió,Brasil,ciudad,"Maceió, Brasil","-9.6476843,-35.7339264",-9.6476843,-35.7339264
+Valparaíso,Chile,ciudad,"Valparaíso, Chile","-33.0462475,-71.6198032",-33.0462475,-71.6198032
+Santiago de Chile,Chile,capital,"Santiago de Chile, Chile","-33.437913,-70.6504558",-33.437913,-70.6504558
+Concepción,Chile,ciudad,"Concepción, Chile","-36.8268041,-73.0504239",-36.8268041,-73.0504239
+Cartagena de Indias,Colombia,ciudad,"Cartagena de Indias, Colombia","10.4131792,-75.48929446",10.4131792,-75.48929446
+Barranquilla,Colombia,ciudad,"Barranquilla, Colombia","10.979932,-74.7957384",10.979932,-74.7957384
+Santiago de Cali,Colombia,ciudad,"Santiago de Cali, Colombia","3.4319329,-76.5113048",3.4319329,-76.5113048
+Bogotá,Colombia,capital,"Bogotá, Colombia","4.5980478,-74.0760867",4.5980478,-74.0760867
+Medellín,Colombia,ciudad,"Medellín, Colombia","6.2443382,-75.573553",6.2443382,-75.573553
+Bucaramanga,Colombia,ciudad,"Bucaramanga, Colombia","7.16666325,-73.10447657",7.16666325,-73.10447657
+San José,Costa Rica,capital,"San José, Costa Rica","9.9325427,-84.0795782",9.9325427,-84.0795782
+La Habana,Cuba,capital,"La Habana, Cuba","23.1379911,-82.3658562",23.1379911,-82.3658562
+Roseau,Dominica,capital,"Roseau, Dominica","15.2984622,-61.3875049",15.2984622,-61.3875049
+Quito,Ecuador,capital,"Quito, Ecuador","-0.2201687,-78.5120913",-0.2201687,-78.5120913
+Guayaquil,Ecuador,ciudad,"Guayaquil, Ecuador","-2.2124357,-79.895812",-2.2124357,-79.895812
+San Salvador,El Salvador,capital,"San Salvador, El Salvador","13.6977587,-89.19301",13.6977587,-89.19301
+Saint George's,Granada,capital,"Saint George's, Granada","12.0535331,-61.751805",12.0535331,-61.751805
+Ciudad de Guatemala,Guatemala,capital,"Ciudad de Guatemala, Guatemala","14.6417889,-90.5132239",14.6417889,-90.5132239
+Georgetown,Guyana,capital,"Georgetown, Guyana","6.8025766,-58.1628612",6.8025766,-58.1628612
+Puerto Príncipe,Haití,capital,"Puerto Príncipe, Haití","18.547327,-72.3395928",18.547327,-72.3395928
+Tegucigalpa,Honduras,capital,"Tegucigalpa, Honduras","14.0931919,-87.2012631",14.0931919,-87.2012631
+Kingston,Jamaica,capital,"Kingston, Jamaica","17.9712148,-76.7928128",17.9712148,-76.7928128
+León,México,ciudad,"León, México","21.0973353,-101.6476422",21.0973353,-101.6476422
+Puebla,México,ciudad,"Puebla, México","18.833333,-98",18.833333,-98
+Toluca,México,ciudad,"Toluca, México","19.292545,-99.6569007",19.292545,-99.6569007
+Juárez,México,ciudad,"Juárez, México","19.29348285,-100.4645924",19.29348285,-100.4645924
+Ciudad de Mexico,México,capital,"Ciudad de Mexico, México","19.4325301,-99.1332102",19.4325301,-99.1332102
+Torreón,México,ciudad,"Torreón, México","25.5414662,-103.4531977",25.5414662,-103.4531977
+Monterrey,México,ciudad,"Monterrey, México","25.6764922,-100.3060829",25.6764922,-100.3060829
+Tijuana,México,ciudad,"Tijuana, México","32.5344409,-117.0393788",32.5344409,-117.0393788
+Guadalajara,México,ciudad,"Guadalajara, México","20.676143,-103.3469982",20.676143,-103.3469982
+Managua,Nicaragua,capital,"Managua, Nicaragua","12.1461244,-86.273717",12.1461244,-86.273717
+Panamá City,Panamá,capital,"Panamá City, Panamá","8.9707433,-79.5344539",8.9707433,-79.5344539
+Asunción,Paraguay,capital,"Asunción, Paraguay","-25.2960638,-57.6311446",-25.2960638,-57.6311446
+Lima,Perú,capital,"Lima, Perú","-12,-76.833333",-12,-76.833333
+Arequipa,Perú,ciudad,"Arequipa, Perú","-16.333333,-71.5",-16.333333,-71.5
+San Juan,Puerto Rico,capital,"San Juan, Puerto Rico","18.38423905,-66.05343987",18.38423905,-66.05343987
+Santo Domingo,República Dominicana,capital,"Santo Domingo, República Dominicana","18.4801972,-69.942111",18.4801972,-69.942111
+Paramaribo,Surinam,capital,"Paramaribo, Surinam","5.8216198,-55.1771974",5.8216198,-55.1771974
+Puerto España,Trinidad y Tobago,capital,"Puerto España, Trinidad y Tobago","-27.0509077,-55.4491036",-27.0509077,-55.4491036
+Montevideo,Uruguay,capital,"Montevideo, Uruguay","-34.9059039,-56.1913569",-34.9059039,-56.1913569
+Barquisimeto,Venezuela,ciudad,"Barquisimeto, Venezuela","10.0740372,-69.3215667",10.0740372,-69.3215667
+Maracay,Venezuela,ciudad,"Maracay, Venezuela","10.2513662,-67.6017245",10.2513662,-67.6017245
+Caracas,Venezuela,capital,"Caracas, Venezuela","10.506098,-66.9146017",10.506098,-66.9146017
+Maracaibo,Venezuela,ciudad,"Maracaibo, Venezuela","10.6651557,-71.6230753",10.6651557,-71.6230753
+San Cristobal,Venezuela,ciudad,"San Cristobal, Venezuela","7.7756463,-72.2213001",7.7756463,-72.2213001
+Valencia,Venezuela,ciudad,"Valencia, Venezuela","10.1704877,-68.0011214",10.1704877,-68.0011214
+Ciudad Guayana,Venezuela,ciudad,"Ciudad Guayana, Venezuela","8.3389155,-62.7132656",8.3389155,-62.7132656
+Ecuador,Ecuador,pais,Ecuador,"-1.3397668,-79.3666965",-1.3397668,-79.3666965
+Brasil,Brasil,pais,Brasil,"-10.3333333,-53.2",-10.3333333,-53.2
+Bolivia,Bolivia,pais,Bolivia,"-17.0568696,-64.9912286",-17.0568696,-64.9912286
+Paraguay,Paraguay,pais,Paraguay,"-23.3165935,-58.1693445",-23.3165935,-58.1693445
+Chile,Chile,pais,Chile,"-31.7613365,-71.3187697",-31.7613365,-71.3187697
+Uruguay,Uruguay,pais,Uruguay,"-32.8755548,-56.0201525",-32.8755548,-56.0201525
+Argentina,Argentina,pais,Argentina,"-35.1124869,-65.241974",-35.1124869,-65.241974
+Perú,Perú,pais,Perú,"-6.8699697,-75.0458515",-6.8699697,-75.0458515
+Costa Rica,Costa Rica,pais,Costa Rica,"10.2735633,-84.0739102",10.2735633,-84.0739102
+Nicaragua,Nicaragua,pais,Nicaragua,"12.3724928,-84.8700308",12.3724928,-84.8700308
+El Salvador,El Salvador,pais,El Salvador,"13.8000382,-88.9140683",13.8000382,-88.9140683
+Honduras,Honduras,pais,Honduras,"15.0610686,-84.5978534",15.0610686,-84.5978534
+Guatemala,Guatemala,pais,Guatemala,"15.6356088,-89.8988087",15.6356088,-89.8988087
+República Dominicana,República Dominicana,pais,República Dominicana,"19.094175,-70.3012705",19.094175,-70.3012705
+Haití,Haití,pais,Haití,"19.1399952,-72.3570972",19.1399952,-72.3570972
+México,México,pais,México,"19.4325301,-99.1332102",19.4325301,-99.1332102
+Colombia,Colombia,pais,Colombia,"2.8930783,-73.7845072",2.8930783,-73.7845072
+Cuba,Cuba,pais,Cuba,"23.0131338,-80.8328748",23.0131338,-80.8328748
+Venezuela,Venezuela,pais,Venezuela,"8.0018709,-66.1109318",8.0018709,-66.1109318
+Panama,Panama,pais,Panama,"8.3096067,-81.3066246",8.3096067,-81.3066246
+Mundo,Mundo,area,Mundo,"4.8322005,-56.4225941",4.8322005,-56.4225941
