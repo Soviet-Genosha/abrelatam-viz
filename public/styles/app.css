@@ -116,9 +116,15 @@ g.leaf circle.redsocial{
 
 
 
+text.label, text.label ,text.label{
+  font-size:2em;
+}
 
+text.count{
+  font-size: 4em;
+}
 
 
 text {
-  font: 10px sans-serif;
+  font: 12px sans-serif;
 }
