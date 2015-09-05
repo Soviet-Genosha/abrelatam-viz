@@ -49,11 +49,7 @@ window.abreLatam.relationships = {
 	show:function(d){
 		
 		var rel = this.getRelationsFor(d.n.Nombre);
-		if (rel.length === 0){
-			console.log('no relations for ',d.n.Nombre);
-		}
-		else {
-			d3.selectAll('circle.map-item')
+		d3.selectAll('circle.map-item')
 							.transition()
 							.duration(1000)
 							.attr('opacity',0.2);
@@ -66,6 +62,20 @@ window.abreLatam.relationships = {
 				 			.transition()
 							.duration(1000)
 							.attr('opacity',1);
+
+			//Muesto el ciruclo actual
+			var r = rel[i];
+				var selector = 'circle.map-item[data-id="' + d.id + '"]';
+				d3.selectAll(selector)
+				 			.transition()
+							.duration(1000)
+							.attr('opacity',1);
+
+		if (rel.length === 0){
+			console.log('no relations for ',d.n.Nombre);
+		}
+		else {
+			
 
 			//Mostrar los circulos
 			for (var i = 0; i < rel.length; i++) {
