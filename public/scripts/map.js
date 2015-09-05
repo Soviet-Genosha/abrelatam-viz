@@ -24,7 +24,7 @@ window.abreLatam.map = {
             },
             setProjection: function(element) {
                 this.projection = d3.geo.mercator() //ACA CAMBIE LA PROYECCION
-                .center([-15.85606,  -15.41684])
+                .center([-35,  -17])
               .rotate([2.7, 0])
               .scale(450)
               .translate([element.offsetWidth / 2
