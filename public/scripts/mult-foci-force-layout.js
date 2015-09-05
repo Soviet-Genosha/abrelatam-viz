@@ -115,12 +115,13 @@ window.abreLatam.fociProjectsMap = {
         }
 
         function showPopover (d,i) {
-        
         window.abreLatam.controller.showRelated(d,d.id);
+        // window.abreLatam.controller.showOnlyByCountry(d.n.Pais);
+        
         var self      = d3.select(this);
         
     	var projectTemplate = doT.template($( "script.projectTemplate" ).html());
-      	console.log(d);
+      	
           $(self).popover({
             placement: 'auto top',
             container: 'body',

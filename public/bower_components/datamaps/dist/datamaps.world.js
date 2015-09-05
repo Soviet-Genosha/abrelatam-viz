@@ -907,7 +907,7 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Brazil"
+                    "name": "Brasil"
                 },
                 "id": "BRA",
                 "arcs": [
@@ -1209,7 +1209,7 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Dominican Republic"
+                    "name": "República Dominicana"
                 },
                 "id": "DOM",
                 "arcs": [
@@ -1475,7 +1475,7 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Haiti"
+                    "name": "Haití"
                 },
                 "id": "HTI",
                 "arcs": [
@@ -1817,7 +1817,7 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Mexico"
+                    "name": "México"
                 },
                 "id": "MEX",
                 "arcs": [
@@ -2032,7 +2032,7 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Panama"
+                    "name": "Panamá"
                 },
                 "id": "PAN",
                 "arcs": [
@@ -2041,7 +2041,7 @@
             }, {
                 "type": "Polygon",
                 "properties": {
-                    "name": "Peru"
+                    "name": "Perú"
                 },
                 "id": "PER",
                 "arcs": [

@@ -1875,7 +1875,7 @@
     palevioletred: 14381203,
     papayawhip: 16773077,
     peachpuff: 16767673,
-    peru: 13468991,
+    Perú: 13468991,
     pink: 16761035,
     plum: 14524637,
     powderblue: 11591910,

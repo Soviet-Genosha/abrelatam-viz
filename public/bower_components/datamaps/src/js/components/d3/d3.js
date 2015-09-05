@@ -1614,7 +1614,7 @@ d3 = function() {
     palevioletred: "#db7093",
     papayawhip: "#ffefd5",
     peachpuff: "#ffdab9",
-    peru: "#cd853f",
+    Perú: "#cd853f",
     pink: "#ffc0cb",
     plum: "#dda0dd",
     powderblue: "#b0e0e6",

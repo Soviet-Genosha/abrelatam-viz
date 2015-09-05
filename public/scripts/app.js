@@ -50,7 +50,7 @@ window.abreLatam.controller = {
         showOnlyByCountry:function(pais){
             window.abreLatam.fociProjectsMap.showOnly(pais.toLowerCase());
             var filtered = window.abreLatam.cloud.reloadCountry(pais);
-            if (filter.length > 0){
+            if (filtered.length > 0){
                 window.abreLatam.stats.showOnly(filtered,pais);
             }
         },
@@ -58,7 +58,7 @@ window.abreLatam.controller = {
             var k =(c.country + "-" + c.city).split(' ').join('-').toLowerCase();
             window.abreLatam.fociProjectsMap.showOnly(k.toLowerCase());
             var filtered = window.abreLatam.cloud.reload(c.country,c.city,k.toLowerCase());
-            if (filter.length > 0){
+            if (filtered.length > 0){
                 window.abreLatam.stats.showOnly(filtered,c.country,c.city);
             }
         },
