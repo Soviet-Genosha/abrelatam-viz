@@ -45,6 +45,7 @@ window.abreLatam.fociProjectsMap = {
 	        	var xy = self.latLngToXY(n.geo.Lat, n.geo.Lon);
 			
 				return{
+						id:j,
 						n:n,
 						radius: maxRadius/2.5,
 				    	color: window.abreLatam.cloud.getColorFor(n.Categoria.trim()),
@@ -59,10 +60,6 @@ window.abreLatam.fociProjectsMap = {
             if (!p.n.geo){
                 console.log("El projecto " + p.n.Nombre + " no tiene posicion para" + p.n.Ciudad +" y no se lo podra visualizar");
             }
-            else {
-				p.id = id;
-				id++;	
-            }            
             return p.n.geo;
         });
 
