@@ -45,7 +45,6 @@ window.abreLatam.fociProjectsMap = {
 	        	var xy = self.latLngToXY(n.geo.Lat, n.geo.Lon);
 			
 				return{
-						id:j,
 						n:n,
 						radius: maxRadius/2.5,
 				    	color: window.abreLatam.cloud.getColorFor(n.Categoria.trim()),
@@ -55,10 +54,15 @@ window.abreLatam.fociProjectsMap = {
 			}
 	
 		});
+		var id = 0;
 		nodes =  _.filter(nodes, function(p) {
             if (!p.n.geo){
                 console.log("El projecto " + p.n.Nombre + " no tiene posicion para" + p.n.Ciudad +" y no se lo podra visualizar");
             }
+            else {
+				p.id = id;
+				id++;	
+            }            
             return p.n.geo;
         });
 
@@ -91,7 +95,7 @@ window.abreLatam.fociProjectsMap = {
 		    .data(nodes)
 		  .enter().append("circle")
 		  	.attr('data-id' ,function(d,i){
-		  		return i;
+		  		return d.id;
 		  	})
 		  	.attr('class' ,function(d){
 		  		//cluster by city?
@@ -115,7 +119,7 @@ window.abreLatam.fociProjectsMap = {
 
         function showPopover (d,i) {
         
-        window.abreLatam.controller.showRelated(d,i);
+        window.abreLatam.controller.showRelated(d,d.id);
         var self      = d3.select(this);
         
     	var projectTemplate = doT.template($( "script.projectTemplate" ).html());
