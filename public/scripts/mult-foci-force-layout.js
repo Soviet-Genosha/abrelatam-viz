@@ -189,7 +189,7 @@ window.abreLatam.fociProjectsMap = {
 		layer.selectAll('circle')
 			.transition()
 			.duration(1000)
-			.attr('opacity',0.2);
+			.attr('opacity',0.3);
 		layer.selectAll('circle.' + c + '')
 			.transition()
 			.duration(1000)

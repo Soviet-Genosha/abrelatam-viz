@@ -16,7 +16,7 @@ window.abreLatam.controller = {
 
     load: function(){
     
-    var ready = function(error, projects, cities,relationships){
+    var ready = function(error, projects, cities, relationships){
 
         var filterProjects = _.filter(projects, function(p) {
             if (!p.Ciudad){
@@ -47,11 +47,11 @@ window.abreLatam.controller = {
         hideRelated: function(){
             window.abreLatam.relationships.hide();
         },
-        showOnlyByCountry:function(c){
-            window.abreLatam.fociProjectsMap.showOnly(c.toLowerCase());
-            var filtered = window.abreLatam.cloud.reloadCountry(c);
+        showOnlyByCountry:function(pais){
+            window.abreLatam.fociProjectsMap.showOnly(pais.toLowerCase());
+            var filtered = window.abreLatam.cloud.reloadCountry(pais);
             if (filter.length > 0){
-                window.abreLatam.stats.showOnly(filtered,c);
+                window.abreLatam.stats.showOnly(filtered,pais);
             }
         },
         showOnlyByCity:function(c){
