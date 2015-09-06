@@ -30,7 +30,7 @@ Recife,Brasil,ciudad,"Recife, Brasil","-8.0581077,-34.8979047",-8.0581077,-34.89
 Maceió,Brasil,ciudad,"Maceió, Brasil","-9.6476843,-35.7339264",-9.6476843,-35.7339264
 Valparaíso,Chile,ciudad,"Valparaíso, Chile","-33.0462475,-71.6198032",-33.0462475,-71.6198032
 Santiago de Chile,Chile,capital,"Santiago de Chile, Chile","-33.437913,-70.6504558",-33.437913,-70.6504558
-Concepción,Chile,ciudad,"Concepción, Chile","-36.8268041,-73.0504239",-36.8268041,-73.0504239
+Concepción,Chile,ciudad,"Concepción, Chile","-36.8233229,-73.0474343",-36.8233229,-73.0474343
 Cartagena de Indias,Colombia,ciudad,"Cartagena de Indias, Colombia","10.4131792,-75.48929446",10.4131792,-75.48929446
 Barranquilla,Colombia,ciudad,"Barranquilla, Colombia","10.979932,-74.7957384",10.979932,-74.7957384
 Santiago de Cali,Colombia,ciudad,"Santiago de Cali, Colombia","3.4319329,-76.5113048",3.4319329,-76.5113048
@@ -95,4 +95,12 @@ Colombia,Colombia,pais,Colombia,"2.8930783,-73.7845072",2.8930783,-73.7845072
 Cuba,Cuba,pais,Cuba,"23.0131338,-80.8328748",23.0131338,-80.8328748
 Venezuela,Venezuela,pais,Venezuela,"8.0018709,-66.1109318",8.0018709,-66.1109318
 Panama,Panama,pais,Panama,"8.3096067,-81.3066246",8.3096067,-81.3066246
-Mundo,Mundo,area,Mundo,"4.8322005,-56.4225941",4.8322005,-56.4225941
+Mundo,Mundo,area,Mundo,"15.400986, -45.974596",15.400986,-45.974596
+Cochabamba,Bolivia,ciudad,"Cochabamba, Bolivia","-17.3935419,-66.1570139",-17.3935419,-66.1570139
+Minas,Brasil,ciudad,"Minas, Brasil","-20.39130615,-43.43866764",-20.39130615,-43.43866764
+Caribbean,Caribbean,area,Caribbean,"15.0000001,-75.0000001",15.0000001,-75.0000001
+Caribe,Caribe,area,Caribe,"15.0000001,-75.0000001",15.0000001,-75.0000001
+Jamaica,Jamaica,pais,Jamaica,"18.1850507,-77.3947693",18.1850507,-77.3947693
+Panamá,Panamá,pais,Panamá,"8.3096067,-81.3066246",8.3096067,-81.3066246
+Puerto Rico,Puerto Rico,pais,Puerto Rico,"18.2017809,-66.5841246",18.2017809,-66.5841246
+Ciudad Juarez,Mexico,pais,"Ciudad Juarez, Mexico","31.7377426,-106.4835192",31.7377426,-106.4835192
