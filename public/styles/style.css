@@ -50,3 +50,7 @@
 .icon-capital:before {
 	content: "\e600";
 }
+
+.map-item{
+	    stroke-width: 0px;
+}
