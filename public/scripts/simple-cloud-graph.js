@@ -203,18 +203,25 @@ window.abreLatam.cloud = {
             .attr("transform", function(d, i) 
             { return "translate(0," + i * barHeight + ")"; });
 
-
-            
-        window.abreLatam.cloud.svg.selectAll("rect")
+ window.abreLatam.cloud.svg.selectAll("rect")
+              .data(data,function(d,i){
+                return i;
+              })
             .transition().duration(1000)
-              .attr("width", function(d) { return window.abreLatam.cloud.x(d.size); })
+              .attr("width", function(d) 
+                { return window.abreLatam.cloud.x(d.size); })
               .attr("height", barHeight - 1);
 
           window.abreLatam.cloud.svg.selectAll("text")
+              .data(data,function(d,i){
+                return i;
+              })
+              .transition().duration(1000)
               .attr("x", function(d) { return window.abreLatam.cloud.x(d.size) - 3; })
               .attr("y", barHeight / 2)
               .attr("dy", ".35em")
               .text(function(d) { return d.name +  " - " + d.size; });
+        
         bar.exit().remove();
     }
 
