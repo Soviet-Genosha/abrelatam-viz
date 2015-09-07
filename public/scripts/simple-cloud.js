@@ -84,7 +84,7 @@ window.abreLatam.cloud = {
                     i++;
                 }
             }
-            
+            nodes = _.sortBy(nodes, function(o) { return o.count; }).reverse();
 			var root = {
             	name: "root",
             	children : nodes,
@@ -146,160 +146,76 @@ window.abreLatam.cloud = {
     	return  window.abreLatam.cloud.color(i);
     },
    	reloadGraph: function(root){
-   		var diameter = 800,
-    format = d3.format(",d");
+        var data = root.children;
+        var width = 420,
+        barHeight = 20;
 
+        window.abreLatam.cloud.x = d3.scale.linear()
+            .range([50, width]);
 
-var bubble = d3.layout.pack()
-    .sort(null)
-    .size([diameter, diameter])
-    .padding(10);
-this.svg = d3.select("svg")
-			  .append("g")
-			    .attr("transform", "translate(675,200)")
-			    .attr("width", diameter)
-			    .attr("height", diameter)
-			    .attr("class", "bubble");
+        var chart = this.svg = d3.select("svg")
+              .append("g")
+                .attr("transform", "translate(675,200)")
+                .attr("width", width)
+                .attr("height", width)
+                .attr("class", "bubble chart")
 
-var node = window.abreLatam.cloud.svg.selectAll(".node")
-    .data(bubble.nodes(classes(root))
-    .filter(function (d) {
-    return !d.children;
-}))
-    .enter().append("g")
-    .attr("class", "node")
-    .attr("transform", function (d) {
-    return "translate(" + d.x + "," + d.y + ")";
-});
+        
+          window.abreLatam.cloud.x.domain([0, d3.max(data, function(d) { return d.size; })]);
 
-node.append("title")
-    .text(function (d) {
-    return d.className + ": " + format(d.value);
-});
+          window.abreLatam.cloud.svg.attr("height", barHeight * data.length);
 
-node.append("circle")
-    .attr("r", function (d) {
-    return d.r;
-})
-    .style("fill", function (d, i) {
-    return window.abreLatam.cloud.color(i);
-});
-/* Create the text for each block */
-    node.append("text")
-	    .attr("dx", function(d){return -20})
-	    .text(function(d){return d.className})
+        window.abreLatam.cloud.changebubble(root); 
 
+        
+    },
+    changebubble:function(root){
+        var barHeight = 20;
+        var data = root.children;
+        
+        
+        
+        var bar = 
+            window.abreLatam.cloud.bar = 
+            this.svg.selectAll("g.bar")
+              .data(data, function(d,i){
+                return i;
+              });
+        
+        bar.attr("transform", function(d, i) 
+                    { return "translate(0," + i * barHeight + ")"; });
 
-// Returns a flattened hierarchy containing all leaf nodes under the root.
-
-function classes(root) {
-    var classes = [];
-
-    function recurse(name, node) {
-        if (node.children) node.children.forEach(function (child) {
-            recurse(node.name, child);
-        });
-        else classes.push({
-            packageName: name,
-            className: node.name,
-            value: node.size
-        });
+        bar.enter()
+                .append("g")
+                .attr('class', 'bar')
+                .attr("transform", function(d, i) 
+                    { return "translate(0," + i * barHeight + ")"; })
+        
+        bar.append('rect');
+        //         .attr("width", function(d) { return window.abreLatam.cloud.x(d.size); })
+        //         .attr("height", barHeight - 1);
+        
+        bar.append('text');
+        //           .attr("x", function(d) { return window.abreLatam.cloud.x(d.size) - 3; })
+        //           .attr("y", barHeight / 2)
+        //           .attr("dy", ".35em")
+        //           .text(function(d) { return d.name +  " - " + d.size; });
+        
+        bar.select('rect')
+                .transition()
+                .duration(1000)
+                .attr("width", function(d) { return window.abreLatam.cloud.x(d.size); })
+                .attr("height", barHeight - 1);
+        bar.select('text')
+                .transition()
+                .duration(1000)
+                  .attr("x", function(d) { return window.abreLatam.cloud.x(d.size) - 3; })
+                  .attr("y", barHeight / 2)
+                  .attr("dy", ".35em")
+                  .text(function(d) { return d.name +  " - " + d.size; });
+        
+        bar.exit().remove();
     }
 
-    recurse(null, root);
-    return {
-        children: classes
-    };
-}
-
-//d3.select(self.frameElement).style("height", diameter + "px");
-
-
-//My Refer;
-var click = 0;
-
-this.changebubble= function (root) {
-    var node = this.svg.selectAll(".node")
-        .data(
-            bubble.nodes(classes(root)).filter(function (d){return !d.children;}),
-            function(d) {return d.className} // key data based on className to keep object constancy
-        );
-    
-    // capture the enter selection
-    var nodeEnter = node.enter()
-        .append("g")
-        .attr("class", "node")
-        .attr("transform", function (d) {
-            return "translate(" + d.x + "," + d.y + ")";
-        });
-    
-    // re-use enter selection for circles
-    nodeEnter
-        .append("circle")
-        .attr("r", function (d) {return d.r;})
-        .style("fill", function (d, i) {
-        	
-        	return window.abreLatam.cloud.color(i);
-        })
-    
-    nodeEnter.append("text")
-        .attr("dx", function(d){return -20})
-	    .text(function(d){return d.className;})
-    
-
-    // re-use enter selection for titles
-    nodeEnter
-        .append("title")
-        .text(function (d) {
-            return d.className + ": " + format(d.value);
-        });
-    
-    node.select("circle")
-        .transition().duration(1000)
-        .attr("r", function (d) {
-            return d.r;
-        })
-        .style("fill", function (d, i) {
-            
-            return window.abreLatam.cloud.color(i);
-        });
-    node.select("text")
-    	.transition().duration(1000)
-	    .attr("dx", function(d){return -20})
-	    .text(function(d){return d.className})
-
-
-    node.transition().attr("class", "node")
-        .attr("transform", function (d) {
-        return "translate(" + d.x + "," + d.y + ")";
-    });
-
-    node.exit().remove();
-
-    // Returns a flattened hierarchy containing all leaf nodes under the root.
-    function classes(root) {
-        var classes = [];
-
-        function recurse(name, node) {
-            if (node.children) node.children.forEach(function (child) {
-                recurse(node.name, child);
-            });
-            else classes.push({
-                packageName: name,
-                className: node.name,
-                value: node.size
-            });
-        }
-
-        recurse(null, root);
-        return {
-            children: classes
-        };
-    }
-
-    //d3.select(self.frameElement).style("height", diameter + "px");
-	}
-
-   	}
 };
 
