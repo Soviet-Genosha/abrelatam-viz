@@ -2,7 +2,8 @@ window.abreLatam = window.abreLatam || {};
 
 window.abreLatam.fociProjectsMap = {
 
-	
+	activeId:0,	
+	nodes:[],
 	load: function(map,cities,projects){
 		map.addPlugin('packedCircles', function ( layer, data ) {  
 	    
@@ -20,7 +21,7 @@ window.abreLatam.fociProjectsMap = {
 
 
 	
-		var nodes = projects.map(function(n,j){
+		var nodes = window.abreLatam.fociProjectsMap.nodes =  projects.map(function(n,j){
 			
 			var k = n.Ciudad;
 
@@ -56,7 +57,7 @@ window.abreLatam.fociProjectsMap = {
 	
 		});
 		var id = 0;
-		nodes =  _.filter(nodes, function(p) {
+		nodes = window.abreLatam.fociProjectsMap.nodes =  _.filter(nodes, function(p) {
             if (!p.n.geo){
                 console.log("El projecto " + p.n.Nombre + " no tiene posicion para" + p.n.Ciudad +" y no se lo podra visualizar");
             }
@@ -103,41 +104,11 @@ window.abreLatam.fociProjectsMap = {
 		  	})
 		    .attr("r", function(d) { return d.radius; })
 		    .style("fill", function(d) { return d.color; })
-		    .on('mouseover',showPopover)
-		    .on('mouseout',removePopovers);
+		    .on('mouseover',window.abreLatam.fociProjectsMap.showDetail)
+		    .on('mouseout',window.abreLatam.fociProjectsMap.hideDetails);
 
-
-		function removePopovers () {
-			
-			var self      = d3.select(this);
-          $('.popover').remove();
-          window.abreLatam.controller.hideRelated();
-        }
-
-        function showPopover (d,i) {
-        window.abreLatam.controller.showRelated(d,d.id);
-        // window.abreLatam.controller.showOnlyByCountry(d.n.Pais);
-        
-        var self      = d3.select(this);
-        
-    	var projectTemplate = doT.template($( "script.projectTemplate" ).html());
-      	
-          $(self).popover({
-            placement: 'auto top',
-            container: 'body',
-            trigger: 'manual',
-            html : true,
-            content: function() { 
-              return projectTemplate(d.n);
-          	}
-          });
-          $(self).popover('show');
-        }
+		
 		function tick(e) {
-		// link.attr("x1", function(d) { return d.source.x; })
-	 //        .attr("y1", function(d) { return d.source.y; })
-	 //        .attr("x2", function(d) { return d.target.x; })
-	 //        .attr("y2", function(d) { return d.target.y; });
 		  circle
 		      .each(gravity(.2 * e.alpha))
 		      .each(collide(.5))
@@ -185,8 +156,20 @@ window.abreLatam.fociProjectsMap = {
 	
 		map.packedCircles( projects );  
 	},
-
-	showOnly: function(c){
+	showOnlyById: function(id){
+		var layer = window.abreLatam.fociProjectsMap.baseSvg ;
+		layer.selectAll('circle')
+			.transition()
+			.duration(1000)
+			.attr('opacity',0.3);
+		
+		var c = layer.selectAll('circle[data-id="'+ id + '"]'); 
+			c.transition()
+			.duration(1000)
+			.attr('opacity',1);	
+		return c.data()[0];
+	},
+	showOnlyByClass: function(c){
 		var layer = window.abreLatam.fociProjectsMap.baseSvg ;
 		layer.selectAll('circle')
 			.transition()
@@ -205,7 +188,46 @@ window.abreLatam.fociProjectsMap = {
 			.duration(1000)
 			.attr('opacity',1);
 	},
-
-
-
+	moveNext:function(){
+		var maximum =  this.nodes.length -1;
+		var minimum = 0;
+		this.activeId = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+		
+		var active = this.showOnlyById(this.activeId);
+		this.removePopovers();
+		this.showDetail(active);
+		var filtered = window.abreLatam.cloud.reloadCountry(active.n.Pais);
+            if (filtered.length > 0){
+                window.abreLatam.stats.showOnly(filtered,active.n.Pais);
+            }
+	},
+	removePopovers:function() {
+			
+		$('.popover').remove();
+		$('.popover').html('');
+        window.abreLatam.controller.hideRelated();
+    },
+    showDetail:function(active) {
+    	$('.popover').remove();
+        window.abreLatam.controller.showRelated(active,active.id);
+        
+        var self      = d3.select(this);
+        
+    	var projectTemplate = doT.template($( "script.projectTemplate" ).html());
+      	window.abreLatam.fociProjectsMap.active = active;
+      	  var ctn = function() { 
+            	console.log("post",window.abreLatam.fociProjectsMap.active);
+              return projectTemplate(window.abreLatam.fociProjectsMap.active.n);
+          	};
+          $(self).popover({
+            placement: 'bottom left',
+            container: 'body',
+            trigger: 'manual',
+            html : true,
+            content: ctn
+          });
+          $(self).popover('show');
+      
+        }
+    
 };

@@ -13,7 +13,9 @@ $(document).ready(function(){
 
 window.abreLatam = window.abreLatam || {};
 window.abreLatam.controller = {
-
+    intervalSec: 20,
+    activeProject: 0,
+    filterProjects: [],
     load: function(){
     
     var ready = function(error, projects, cities, relationships){
@@ -29,7 +31,9 @@ window.abreLatam.controller = {
         window.abreLatam.relationships.load(filterProjects,relationships);
         window.abreLatam.cloud.load(filterProjects);
         window.abreLatam.fociProjectsMap.load(window.abreLatam.map.map,cities,filterProjects);
-        window.abreLatam.stats.load(filterProjects);        
+        window.abreLatam.stats.load(filterProjects); 
+        this.filterProjects = filterProjects;       
+        window.abreLatam.controller.startAnimation();
     };
     queue()
             .defer(d3.csv, "data/proyectos.csv")
@@ -37,34 +41,44 @@ window.abreLatam.controller = {
             .defer(d3.csv,"data/relaciones.csv")
             .await(ready);
 
-    
-
-
         },
         showRelated: function(d){
             window.abreLatam.relationships.show(d);
+            
         },
         hideRelated: function(){
             window.abreLatam.relationships.hide();
         },
         showOnlyByCountry:function(pais){
-            window.abreLatam.fociProjectsMap.showOnly(pais.toLowerCase());
+            window.abreLatam.fociProjectsMap.showOnlyByClass(pais.toLowerCase());
             var filtered = window.abreLatam.cloud.reloadCountry(pais);
             if (filtered.length > 0){
                 window.abreLatam.stats.showOnly(filtered,pais);
             }
+            
         },
         showOnlyByCity:function(c){
             var k =(c.country + "-" + c.city).split(' ').join('-').toLowerCase();
-            window.abreLatam.fociProjectsMap.showOnly(k.toLowerCase());
+            window.abreLatam.fociProjectsMap.showOnlyByClass(k.toLowerCase());
             var filtered = window.abreLatam.cloud.reload(c.country,c.city,k.toLowerCase());
             if (filtered.length > 0){
                 window.abreLatam.stats.showOnly(filtered,c.country,c.city);
             }
+            
         },
         showAll:function(){
+            window.abreLatam.relationships.hide();
             window.abreLatam.fociProjectsMap.showAll();
             window.abreLatam.cloud.showAll();
             window.abreLatam.stats.showAll();
-        }
+        },
+        startAnimation: function(){
+            window.abreLatam.controller.animationInterval = setInterval(function(){
+                window.abreLatam.controller.showAll();
+                window.abreLatam.fociProjectsMap.moveNext();
+            },window.abreLatam.controller.intervalSec * 1000);
+        },
+        pauseAnimation: function(){
+            clearInterval(window.abreLatam.controller.animationInterval);
+        },
 };
