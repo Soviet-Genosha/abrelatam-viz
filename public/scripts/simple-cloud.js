@@ -52,20 +52,37 @@ window.abreLatam.cloud = {
             return nodes;       
    	},
     processRoot: function(projects){
-    		var groups = _.countBy(projects, function(d){
-                return d.Categoria.trim() === "" ? "N/A" : d.Categoria ;
+    		
+            var tags = [];
+
+            projects = _.map(projects,function(d){
+                var currentTags = d.Temas.toLowerCase().split(',');
+                tags = tags.concat(currentTags);
+                d.tags = currentTags;
+                return d;
             });
+
+
+
+            var groups = _.countBy(tags, function(d){
+                return d;
+            });
+
+
+
             var nodes = [];
             var i = 0;
             for(var k in groups){ 
-                nodes.push({
-                    "cluster":0,
-                    "color":i,
-                    "name": k,
-                    "count": groups[k],
-                    "size":groups[k]
-                });
-                i++;
+                if (k.trim() != ""){
+                    nodes.push({
+                        "cluster":0,
+                        "color":i,
+                        "name": k,
+                        "count": groups[k],
+                        "size":groups[k]
+                    });
+                    i++;
+                }
             }
             
 			var root = {
@@ -78,7 +95,7 @@ window.abreLatam.cloud = {
     
     	this.projects = projects;
     	var root = this.processRoot(projects);
-    	this.setupColors(root);
+    	this.setupColors(projects);
 
     	this.reloadGraph(root);	
 
@@ -92,15 +109,30 @@ window.abreLatam.cloud = {
     	};
     	return 0;
     },
-    setupColors: function(root){
+    setupColors: function(projects){
     	
 
-    	window.abreLatam.cloud.categories = root.children.map(function(d,i){
-    		return{
-    			name:d.name,
-    			pos: i,
-    		}
-    	});
+    	
+
+        var groups = _.countBy(projects, function(d){
+                return d.Categoria.trim() === "" ? "N/A" : d.Categoria ;
+        });
+
+
+        window.abreLatam.cloud.categories =  [] 
+
+        var i = 0;
+        for(var k in groups){ 
+                window.abreLatam.cloud.categories.push({
+                    "cluster":0,
+                    "color":i,
+                    "name": k,
+                    "count": groups[k],
+                    "size":groups[k]
+                });
+                i++;
+            }
+        
 
     	window.abreLatam.cloud.color = 
     		d3.scale.category20()
@@ -114,7 +146,7 @@ window.abreLatam.cloud = {
     	return  window.abreLatam.cloud.color(i);
     },
    	reloadGraph: function(root){
-   		var diameter = 300,
+   		var diameter = 800,
     format = d3.format(",d");
 
 
@@ -150,7 +182,7 @@ node.append("circle")
     return d.r;
 })
     .style("fill", function (d, i) {
-    return window.abreLatam.cloud.getColorFor(d.className);
+    return window.abreLatam.cloud.color(i);
 });
 /* Create the text for each block */
     node.append("text")
@@ -207,7 +239,7 @@ this.changebubble= function (root) {
         .attr("r", function (d) {return d.r;})
         .style("fill", function (d, i) {
         	
-        	return window.abreLatam.cloud.getColorFor(d.className);
+        	return window.abreLatam.cloud.color(i);
         })
     
     nodeEnter.append("text")
@@ -229,7 +261,7 @@ this.changebubble= function (root) {
         })
         .style("fill", function (d, i) {
             
-            return window.abreLatam.cloud.getColorFor(d.className);
+            return window.abreLatam.cloud.color(i);
         });
     node.select("text")
     	.transition().duration(1000)

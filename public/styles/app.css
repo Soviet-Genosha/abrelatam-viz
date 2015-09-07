@@ -137,4 +137,15 @@ text {
     position: absolute;
     top: 50vh !important;
     left: 0 !important;
+    overflow: hidden;
+}
+
+.chart rect {
+  fill: steelblue;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
 }
