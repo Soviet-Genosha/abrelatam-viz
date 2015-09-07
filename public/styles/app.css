@@ -146,6 +146,6 @@ text {
 
 .chart text {
   fill: white;
-  font: 10px sans-serif;
+  font-size: 18px;
   text-anchor: end;
 }

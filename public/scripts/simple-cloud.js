@@ -151,7 +151,7 @@ window.abreLatam.cloud = {
         barHeight = 20;
 
         window.abreLatam.cloud.x = d3.scale.linear()
-            .range([50, width]);
+            .range([100, width]);
 
         var chart = this.svg = d3.select("svg")
               .append("g")

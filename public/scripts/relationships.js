@@ -47,6 +47,10 @@ window.abreLatam.relationships = {
         };
 	},
 	show:function(d){
+		d3.selectAll('path.relationship')
+			.transition()
+			.duration(1000)
+			.attr('opacity',0);
 		
 		var rel = this.getRelationsFor(d.n.Nombre);
 		d3.selectAll('circle.map-item')
