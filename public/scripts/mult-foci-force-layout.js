@@ -221,6 +221,7 @@ window.abreLatam.fociProjectsMap = {
           	};
           $(self).popover({
             placement: 'bottom left',
+            title :'Hola!',
             container: 'body',
             trigger: 'manual',
             html : true,
