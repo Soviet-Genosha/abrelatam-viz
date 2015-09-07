@@ -219,15 +219,13 @@ window.abreLatam.fociProjectsMap = {
             	console.log("post",window.abreLatam.fociProjectsMap.active);
               return projectTemplate(window.abreLatam.fociProjectsMap.active.n);
           	};
-          $(self).popover({
-            placement: 'bottom left',
-            title :'Hola!',
+          $('body').popover({
             container: 'body',
             trigger: 'manual',
             html : true,
             content: ctn
           });
-          $(self).popover('show');
+          $('body').popover('show');
       
         }
     

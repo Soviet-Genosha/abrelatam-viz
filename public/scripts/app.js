@@ -13,7 +13,7 @@ $(document).ready(function(){
 
 window.abreLatam = window.abreLatam || {};
 window.abreLatam.controller = {
-    intervalSec: 20,
+    intervalSec: 2,
     activeProject: 0,
     filterProjects: [],
     load: function(){

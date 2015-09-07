@@ -129,3 +129,12 @@ text.count{
 text {
   font: 12px sans-serif;
 }
+
+
+.popover{
+    display: block;
+    z-index: 1000000;
+    position: absolute;
+    top: 50vh !important;
+    left: 0 !important;
+}
