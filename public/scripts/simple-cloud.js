@@ -56,7 +56,7 @@ window.abreLatam.cloud = {
             var tags = [];
 
             projects = _.map(projects,function(d){
-                var currentTags = d.Temas.toLowerCase().split(',');
+                var currentTags = d.Temas.split(',');
                 tags = tags.concat(currentTags);
                 d.tags = currentTags;
                 return d;
@@ -147,8 +147,8 @@ window.abreLatam.cloud = {
     },
    	reloadGraph: function(root){
         var data = root.children;
-        var width = 420,
-        barHeight = 20;
+        var width = 450,
+        barHeight = 40;
 
         window.abreLatam.cloud.x = d3.scale.linear()
             .range([100, width]);
@@ -170,7 +170,7 @@ window.abreLatam.cloud = {
         
     },
     changebubble:function(root){
-        var barHeight = 20;
+        var barHeight = 40;
         var data = root.children;
         
         
@@ -210,9 +210,9 @@ window.abreLatam.cloud = {
                 .transition()
                 .duration(1000)
                   .attr("x", function(d) { return window.abreLatam.cloud.x(d.size) - 3; })
-                  .attr("y", barHeight / 2)
+                  .attr("y", barHeight/2)
                   .attr("dy", ".35em")
-                  .text(function(d) { return d.name +  " - " + d.size; });
+                  .text(function(d) { return d.name +  " - " + d.size + " "; });
         
         bar.exit().remove();
     }
